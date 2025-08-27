@@ -1,0 +1,165 @@
+﻿@model DigiStore.Core.ViewModels.ProductViewModel
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+
+<form asp-action="EditProduct" enctype="multipart/form-data" method="post" id="MyForm">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <div class="row">
+        <!-- ستون چپ: عکس + نصف فیلدها -->
+        <div class="col-md-6">
+
+            <!-- نام محصول -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-pencil"></i>نام محصول </span>
+                    </div>
+                    <input asp-for="Name" class="form-control" placeholder="نام محصول را وارد کنید" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <!-- برند -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-mouse"></i>انتخاب برند </span>
+                    </div>
+                    <select asp-for="BrandId" asp-items="ViewBag.BrandId" class="form-control"></select>
+                </div>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+            </div>
+
+            <!-- دسته بندی -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-mouse"></i>انتخاب دسته بندی </span>
+                    </div>
+                    <select asp-for="CategoryId" asp-items="ViewBag.CategoryId" class="form-control"></select>
+                </div>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <!-- قیمت محصول -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input asp-for="Price" class="form-control" placeholder="قیمت محصول را بنویسد" autocomplete="off" />
+                    <div class="input-group-append">
+                        <span class="input-group-text">قیمت محصول (ريال)</span>
+                    </div>
+                </div>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <!-- قیمت قبلی -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input asp-for="DeletePrice" class="form-control" placeholder="قیمت قبلی محصول را بنویسد" autocomplete="off" />
+                    <div class="input-group-append">
+                        <span class="input-group-text">قیمت قبلی محصول (ريال)</span>
+                    </div>
+                </div>
+                <span asp-validation-for="DeletePrice" class="text-danger"></span>
+            </div>
+
+            <!-- موجودی -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-check"></i>تعداد موجودی </span>
+                    </div>
+                    <input asp-for="Exist" class="form-control" placeholder="تعداد موجود را وارد کنید" />
+                </div>
+                <span asp-validation-for="Exist" class="text-danger"></span>
+            </div>
+
+          
+            <!-- وضعیت نمایش -->
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="NotShow" id="basic_checkbox_2" />
+                    <label class="form-check-label" for="basic_checkbox_2">
+                        @Html.DisplayNameFor(model => model.NotShow)
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- ستون راست: نصف دیگر فیلدها -->
+        <div class="col-md-6">
+            <!-- عکس شاخص -->
+            <div class="form-group text-center">
+                <img src="~/Images/Products/@Model.ImageName" class="img-fluid rounded mb-3" style="max-width: 100%; height: auto;" />
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-file"></i>انتخاب عکس شاخص محصول</span>
+                    </div>
+                    <input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-text"></i>توضیحات محصول </span>
+                    </div>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                </div>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <!-- دکمه ارسال -->
+        </div>
+    </div>
+    <input type="submit" value="ویرایش" class="btn btn-success btn-block" />
+</form>
+
+<script>
+
+
+    // قبل از submit فرم، محتوا را به textarea منتقل کن
+    document.querySelector('form').addEventListener('submit', function (e) {
+        for (var instance in CKEDITOR.instances) {
+            CKEDITOR.instances[instance].updateElement();
+        }
+    });
+
+    CKEDITOR.replace('Description', {
+        contentsCss: ['~/CSS/Font.css'], // CSS فونت‌ها
+        font_names: 'Iransans;' // فونت‌های نمایش داده شده در Toolbar
+    });
+</script>
+
+
+@section ScriptManager
+{
+
+    <script>
+        const priceInput = document.getElementById('PriceInput');
+
+        priceInput.addEventListener('input', function (e) {
+            // حذف همه کاراکترهای غیر عددی (مثل کاما)
+            let value = this.value.replace(/,/g, '').replace(/[^\d]/g, '');
+            if (value === '') {
+                this.value = '';
+                return;
+            }
+            // اضافه کردن جداکننده کاما هر سه رقم
+            this.value = Number(value).toLocaleString('en-US');
+        });
+    </script>
+}

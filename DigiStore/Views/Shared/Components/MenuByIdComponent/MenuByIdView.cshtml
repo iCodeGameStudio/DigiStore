@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.Category>
+
+@if (Model != null && Model.Any())
+{
+    <div class="sub-category-panel">
+        <div class="sub-category-grid">
+            @foreach (var subCategory in Model)
+            {
+                <ul class="sub-category-group">
+                    <li>
+                        <a href="#" class="group-title">@subCategory.Name</a>
+                    </li>
+
+                    @*
+            تغییر در این خط:
+            به جای "SubMenuComponent" از نام کوتاه شده آن یعنی "SubMenu" استفاده کنید.
+            به جای "subCategory.Name" از "subCategory.CategoryId" استفاده کنید.
+            *@
+                    @await Component.InvokeAsync("SubMenuComponent", new { id = subCategory.Id })
+                </ul>
+            }
+        </div>
+    </div>
+}

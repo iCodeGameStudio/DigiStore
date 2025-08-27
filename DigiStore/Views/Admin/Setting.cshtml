@@ -1,0 +1,258 @@
+﻿@model DigiStore.Core.ViewModels.AdminSettingViewModel
+
+@{
+    ViewData["Title"] = "تنظیمات سایت";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="page-title">تنظیمات سایت</h3>
+            <div class="d-inline-block align-items-center">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">لطفا تنظیمات را با دقت اعمال کنید</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main content -->
+<form asp-action="Setting" id="settingForm" method="post">
+    <section class="content">
+        <div class="row">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="box bg-pale-success">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["SuccessTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        <h5>@TempData["SuccessMessage"]</h5>
+                    </div>
+                </div>
+            }
+
+            @* پیام خطا *@
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="box bg-pale-danger">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["ErrorTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        <h5>@TempData["ErrorMessage"]</h5>
+                    </div>
+                </div>
+            }
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">تنظیمات سایت</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="form">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="box-body">
+                            <div class="form-group @(ViewData.ModelState["SiteName"]?.Errors.Count > 0 ? "has-error" : "")">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ti-pencil"></i></span>
+                                        </div>
+                                        <input asp-for="SiteName" class="form-control" placeholder="نام سایت را وارد کنید">
+
+                                    </div>
+                                    <span asp-validation-for="SiteName" class="text-danger d-block mt-1"></span>
+                                </div>
+                            </div>
+                           
+                            <div class="form-group @(ViewData.ModelState["SiteKeys"]?.Errors.Count > 0 ? "has-error" : "")">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ti-text"></i></span>
+                                        </div>
+                                        <textarea asp-for="SiteKeys" class="form-control" placeholder="کلمات کلیدی سایت را وارد کنید"></textarea>
+                                    </div>
+                                    <span asp-validation-for="SiteKeys" class="text-danger d-block mt-1"></span>
+                                </div>
+                            </div>
+                            <div class="form-group @(ViewData.ModelState["SiteDescription"]?.Errors.Count > 0 ? "has-error" : "")">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ti-text"></i>توضیحات سایت</span>
+                                        </div>
+                                        <textarea asp-for="SiteDescription" class="form-control" placeholder="توضیحات سایت را وارد کنید"></textarea>
+                                    </div>
+                                    <span asp-validation-for="SiteDescription" class="text-danger d-block mt-1"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box -->
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">تنظیمات پنل پیامک و ایمیل</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="form">
+                        <div class="box-body">
+                            <div class="form-group @(ViewData.ModelState["SmsApi"]?.Errors.Count > 0 ? "has-error" : "")">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ti-pencil"></i></span>
+                                        </div>
+                                        <input asp-for="SmsApi" class="form-control" placeholder="API پنل پیامک را وارد کنید">
+                                    </div>
+                                    <span asp-validation-for="SmsApi" class="text-danger d-block mt-1"></span>
+                                </div>
+                            </div>
+                            <div class="form-group @(ViewData.ModelState["SmsSender"]?.Errors.Count > 0 ? "has-error" : "")">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ti-pencil"></i></span>
+                                        </div>
+                                        <input asp-for="SmsSender" class="form-control" placeholder="شماره فرستنده پیامک را وارد کنید. مثال:2000333">
+                                    </div>
+                                    <span asp-validation-for="SmsSender" class="text-danger d-block mt-1"></span>
+                                </div>
+                            </div>
+                            <div class="form-group @(ViewData.ModelState["MailAddress"]?.Errors.Count > 0 ? "has-error" : "")">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ti-email"></i></span>
+                                        </div>
+                                        <input asp-for="MailAddress" class="form-control" placeholder="ایمیل خود را وارد کنید. مثال: example@gmail.com">
+                                    </div>
+                                    <span asp-validation-for="MailAddress" class="text-danger d-block mt-1"></span>
+                                </div>
+                            </div>
+                            <div class="form-group @(ViewData.ModelState["MailPassword"]?.Errors.Count > 0 ? "has-error" : "")">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ti-lock"></i></span>
+                                        </div>
+                                        <input asp-for="MailPassword" class="form-control" placeholder="گذرواژه ایمیل خود را وارد کنید">
+                                    </div>
+                                    <span asp-validation-for="MailPassword" class="text-danger d-block mt-1"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                @* 				<button type="submit" class="btn btn-primary btn-outline">
+                <i class="ti-save-alt"></i> Save
+                </button> *@
+                <input type="submit" value="ذخیره تنظیمات" class="btn btn-primary" />
+            </div>
+        </div>
+    </section>
+</form>
+
+
+@section ScriptManager {
+
+    <script>
+        CKEDITOR.replace('SiteDescription', {
+            contentsCss: ['~/CSS/Font.css'], // CSS فونت‌ها
+            font_names: 'Iransans;' // فونت‌های نمایش داده شده در Toolbar
+        });
+        // قبل از submit فرم، محتوا را به textarea منتقل کن
+        document.querySelector('form').addEventListener('submit', function (e) {
+            for (var instance in CKEDITOR.instances) {
+                CKEDITOR.instances[instance].updateElement();
+            }
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#settingForm').submit(function (e) {
+                e.preventDefault();
+
+                // Check client-side validation
+                if (!$(this).valid()) {
+                    return;
+                }
+
+                // Prepare form data
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: formData,
+                    // The success callback is called when the HTTP request is successful (e.g., status 200).
+                    // This is where you check the 'success' property of the JSON response.
+                    success: function (response) {
+                        if (response.success) {
+                            Lobibox.notify('success', {
+                                title: 'عملیات موفقیت آمیز',
+                                img: '/Images/Site/icon-success.png',
+                                soundExt: '.ogg',
+                                soundPath: '/Media/',
+                                msg: response.message,
+                                delay: 10000
+                            });
+                        } else {
+                            // This block will now execute for any server-side validation or logic errors.
+                            Lobibox.notify('error', {
+                                title: 'اخطار',
+                                img: '/Images/Site/icon-error.png',
+                                soundExt: '.ogg',
+                                soundPath: '/Media/',
+                                msg: response.message,
+                                delay: 10000
+                            });
+                        }
+                    },
+                    // The error callback is only for network-level failures (e.g., 404, 500).
+                    error: function (xhr, status, error) {
+                        Lobibox.notify('error', {
+                            title: 'اخطار',
+                            msg: 'خطایی در سرور رخ داده است. لطفاً با پشتیبانی تماس بگیرید.'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

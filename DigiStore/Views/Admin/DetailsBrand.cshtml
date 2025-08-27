@@ -1,0 +1,54 @@
+﻿@model DigiStore.DataAccessLayer.Entities.Brand
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+<div class="card border-0 rounded-3 overflow-hidden">
+
+    <!-- بدنه کارت -->
+    <div class="card-body">
+        <div class="row mb-5">
+
+            <!-- جزئیات برند سمت راست -->
+            <div class="col-md-7 text-right">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <strong class="h5"><i class="fa fa-tag text-facebook mr-1"></i> نام برند:</strong>
+                        <span class="h6">@Model.Name</span>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <strong class="h5"><i class="fa fa-eye text-facebook mr-1"></i> وضعیت نمایش:</strong>
+                        @if (Model.NotShow)
+                        {
+                            <span class="badge badge-danger"><i class="fa fa-times-circle mr-1"></i> عدم تأیید</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-success"><i class="fa fa-check-circle mr-1"></i> تأیید شده</span>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- تصویر برند سمت چپ -->
+            <div class="col-md-5 mb-4 text-center">
+                <img src="~/Images/Brands/@Model.Image"
+                     class="img-fluid rounded shadow"
+                     alt="تصویر برند"
+                     style="max-height:500px; width:100%; transition: transform .3s; cursor: pointer;"
+                     onmouseover="this.style.transform='scale(1.05)'"
+                     onmouseout="this.style.transform='scale(1)'" />
+            </div>
+        </div>
+    </div>
+</div>
+

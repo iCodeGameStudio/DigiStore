@@ -1,0 +1,45 @@
+﻿@model DigiStore.Core.ViewModels.StoreCategoryViewModel
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+
+<form asp-action="AddStoreCategory" enctype="multipart/form-data" id="MyForm" method="post">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ti-mouse"></i>انتخاب دسته بندی</span>
+            </div>
+            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+        </div>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ti-file"></i>انتخاب عکس مدارک</span>
+            </div>
+            <input type="file" asp-for="Img" class="form-control" />
+        </div>
+        <span asp-validation-for="Img" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <input type="submit" value="ذخیره" class="btn btn-success btn-block" />
+        </div>
+    </div>
+</form>
+
+
+

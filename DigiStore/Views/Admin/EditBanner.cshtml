@@ -1,0 +1,108 @@
+﻿@model DigiStore.Core.ViewModels.AdminBannerViewModel
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+
+<form asp-action="EditBanner" id="MyForm" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="row">
+        <!-- تصویر اسلاید سمت چپ -->
+        <div class="col-md-5 text-center mb-4 order-md-2 order-1">
+            <img src="~/Images/Ads/@Model.ImageName"
+                 alt="تصویری پیدا نشد"
+                 class="img-fluid rounded shadow"
+                 style="max-height:400px; width:100%; transition: transform .3s; cursor: pointer;"
+                 onmouseover="this.style.transform='scale(1.05)'"
+                 onmouseout="this.style.transform='scale(1)'" />
+        </div>
+
+        <!-- فیلدهای فرم سمت راست -->
+        <div class="col-md-7 order-md-1 order-2">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-pencil"></i></span>
+                    </div>
+                    <input asp-for="Name" class="form-control" placeholder="نام جایگاه" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-pencil"></i></span>
+                    </div>
+                    <input asp-for="Size" class="form-control" placeholder="سایز جایگاه" />
+                </div>
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-pencil"></i></span>
+                    </div>
+                    <textarea asp-for="Day" class="form-control" placeholder="تعداد روز"></textarea>
+                </div>
+                <span asp-validation-for="Day" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input asp-for="Price" class="form-control" placeholder="قیمت اجاره" autocomplete="off" />
+                    <div class="input-group-append">
+                        <span class="input-group-text">قیمت اجاره (ريال)</span>
+                    </div>
+                </div>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-file"></i> انتخاب عکس اسلاید</span>
+                    </div>
+                    <input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-pencil"></i>سایر توضیحات </span>
+                    </div>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                </div>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+           
+        </div>
+    </div>
+    <input type="submit" value="ویرایش" class="btn btn-success btn-block" />
+</form>
+
+<script>
+    // قبل از submit فرم، محتوا را به textarea منتقل کن
+    document.querySelector('form').addEventListener('submit', function (e) {
+        for (var instance in CKEDITOR.instances) {
+            CKEDITOR.instances[instance].updateElement();
+        }
+    });
+
+    CKEDITOR.replace('Description', {
+        contentsCss: ['~/CSS/Font.css'], // CSS فونت‌ها
+        font_names: 'Iransans;' // فونت‌های نمایش داده شده در Toolbar
+    });
+</script>

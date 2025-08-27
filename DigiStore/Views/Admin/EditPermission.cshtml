@@ -1,0 +1,32 @@
+﻿@model DigiStore.Core.ViewModels.PermissionViewModel
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+
+<form asp-action="EditPermission" id="MyForm" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ti-pencil"></i></span>
+            </div>
+            <input asp-for="Name" class="form-control" placeholder="نام دسترسی" />
+        </div>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <input type="submit" value="ذخیره تغییرات" class="btn btn-success btn-block" />
+        </div>
+    </div>
+</form>

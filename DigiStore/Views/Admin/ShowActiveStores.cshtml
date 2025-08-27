@@ -1,0 +1,105 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.Store>
+
+@{
+    ViewData["Title"] = "فروشگاه های فعال";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="page-title">فروشگاه های فعال</h3>
+            <div class="d-inline-block align-items-center">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">در این قسمت می توانید تمامی فروشگاه های فعال را مدیریت کنید.</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="row">
+
+        <div class="col-lg-12 col-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h4 class="box-title">لیست فروشگاه های فعال</h4>
+                </div>
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <div id="invoice-list_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6"></div>
+                                <div class="col-sm-12 col-md-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table table-hover no-wrap dataTable no-footer" data-page-size="10" role="grid" aria-describedby="invoice-list_info">
+                                        @if (!Model.Any())
+                                        {
+                                            <tr>
+                                                <td colspan="3">
+                                                    <h5 class="text-center">هیچ موردی برای نمایش وجود ندارد</h5>
+                                                </td>
+                                            </tr>
+                                        }
+                                        else
+                                        {
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#Invoice: activate to sort column descending" style="width: 98.0469px;">@Html.DisplayNameFor(model => model.User.Date)</th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#Invoice: activate to sort column descending" style="width: 98.0469px;">@Html.DisplayNameFor(model => model.User.Mobile)</th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#Invoice: activate to sort column descending" style="width: 98.0469px;">@Html.DisplayNameFor(model => model.Name)</th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#Invoice: activate to sort column descending" style="width: 98.0469px;">@Html.DisplayNameFor(model => model.Wallet)</th>
+                                                    <th tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-label="View: activate to sort column ascending" style="width: 69.7969px;">عملیات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr role="row" class="odd">
+                                                        <td class="sorting_1">
+                                                            @Html.DisplayFor(model => item.User.Date)
+                                                        </td>
+                                                        <td class="sorting_1">
+                                                            @Html.DisplayFor(model => item.User.Mobile)
+                                                        </td>
+                                                        <td class="sorting_1">
+                                                            @Html.DisplayFor(model => item.Name)
+                                                        </td>
+                                                        <td class="sorting_1">
+                                                            @item.Wallet?.ToString("n0") ریال
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" onclick="DetailsCouponModal(@item.UserId)" class="btn btn-info btn-sm" data-bs-toggle="tooltip" data-toggle="modal" data-target="#LargeModel" data-title="جزئیات کوپن تخفیف">
+                                                                <i class="fa fa-table fa-lg me-2" aria-hidden="true"></i>
+                                                                جزئیات
+                                                            </a>
+                                                            <span class="vr mx-2"></span> <!-- خط عمودی -->
+
+                                                            <a href="#" onclick="DeleteCouponModal(@item.UserId)" class="btn btn-danger btn-sm" data-bs-toggle="tooltip" data-toggle="modal" data-target="#MiniModel" data-title="تأیید حذف">
+                                                                <i class="fa fa-trash fa-lg me-2" aria-hidden="true"></i>
+                                                                حذف
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        }
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</section>

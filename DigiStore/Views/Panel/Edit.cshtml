@@ -1,0 +1,169 @@
+﻿@model DigiStore.Core.ViewModels.StorePropertyViewModel
+
+
+@{
+    ViewData["Title"] = "مشخصات فروشگاه";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="page-title">مشخصات فروشگاه شما</h3>
+            <div class="d-inline-block align-items-center">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">لطفا در ویرایش مشخصات فروشگاه دقت فرمایید</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<form asp-action="Edit" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <section class="content">
+        <div class="row">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="box bg-pale-success">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["SuccessTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        @TempData["SuccessMessage"]
+                    </div>
+                </div>
+            }
+
+            @* پیام خطا *@
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="box bg-pale-danger">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["ErrorTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        @TempData["ErrorMessage"]
+                    </div>
+                </div>
+            }
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">ویرایش مشخصات فروشگاه</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+                    <div class="form">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ti-pencil"></i></span>
+                                    </div>
+                                    <input asp-for="Name" class="form-control" placeholder="نام فروشگاه را وارد کنید" />
+                                </div>
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ti-pencil"></i></span>
+                                    </div>
+                                    <input asp-for="Tel" class="form-control" placeholder="شماره تماس فروشگاه را وارد کنید" />
+                                </div>
+                                <span asp-validation-for="Tel" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <div class="input-group">
+                                        <label for="logo-upload" class="btn btn-danger input-group-text">
+                                            انتخاب فایل...
+                                        </label>
+                                        <input type="file" id="logo-upload" asp-for="LogoImg" class="d-none" />
+                                        <input type="text" class="form-control" id="file-name-display"
+                                               placeholder="لطفا یک لوگو برای فروشگاه خودتان انتخاب کنید" readonly />
+                                    </div>
+                                    <span asp-validation-for="LogoImg" class="text-danger mt-1 d-block"></span>
+                                </div>
+                                <img src="~/Images/Users/Stores/@Model.LogoName" class="rounded-circle w-150 h-150 d-block mt-3" alt="تصویر یافت نشد" />
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ti-pencil"></i></span>
+                                    </div>
+                                    <textarea asp-for="Address" class="form-control" placeholder="آدرس فروشگاه را بنویسید"></textarea>
+                                </div>
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ti-pencil"></i><label asp-for="Description">توضیحات:</label></span>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <textarea asp-for="Description" class="form-control" placeholder="توضیحات را بنویسید"></textarea>
+                                </div>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <input type="submit" value="اعمال تغییرات" class="btn btn-primary btn-block" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">توضیحات</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+                    <div class="form">
+                        <div class="box-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+
+
+
+
+@section ScriptManager {
+
+    <script>
+        CKEDITOR.replace('Description', {
+            contentsCss: ['~/CSS/Font.css'], // CSS فونت‌ها
+            font_names: 'Iransans;' // فونت‌های نمایش داده شده در Toolbar
+        });
+        // قبل از submit فرم، محتوا را به textarea منتقل کن
+        document.querySelector('form').addEventListener('submit', function (e) {
+            for (var instance in CKEDITOR.instances) {
+                CKEDITOR.instances[instance].updateElement();
+            }
+        });
+    </script>
+
+
+}

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.ProductGallery>
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        Context.Response.Redirect("/");
+        return;
+    }
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-md-4 col-sm-6 p-2">
+        <div class="gallery-card position-relative d-inline-block">
+            <a href="~/Images/Galleries/@item.Image" data-lightbox="gallery">
+                <img src="~/Images/Galleries/@item.Image" alt="تصویر پیدا نشد" class="gallery-img img-fluid" />
+            </a>
+
+            <div class="form-check gallery-checkbox position-absolute top-0 end-0 m-2" style="z-index:9999999">
+
+                <!-- ما از روش فرم استفاده می‌کنیم چون ساده‌ترین حالت برای تست است -->
+                <form action="/Panel/SetCoverImage" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="galleryId" value="@item.Id">
+                    <input type="hidden" name="productId" value="@item.ProductId">
+                    <input type="checkbox" class="form-check-input"
+                           id="galleryCheck_@item.Id"
+                    @(item.Cover ? "checked" : "")
+                           onchange="this.form.submit()">
+                    <label class="form-check-label" for="galleryCheck_@item.Id"></label>
+                </form>
+
+            </div>
+
+            <div class="overlay">
+                <a href="/Panel/DeleteGallery/@item.Id">حذف شود؟</a>
+            </div>
+        </div>
+    </div>
+}
+

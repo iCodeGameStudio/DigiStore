@@ -1,0 +1,89 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.FieldCategory>
+@using DigiStore.Core.Classes;
+@inject PanelLayoutScope scope
+
+@{
+    ViewData["Title"] = "مشخصه های محصول";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+    int productID = ViewBag.MyID;
+    int i = 1;
+    int myCount = Model.Count();
+}
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="page-title">مشخصه های محصول</h3>
+            <div class="d-inline-block align-items-center">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">در این قسمت می توانید برای محصول خود مشخصه ثبت کنید.</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-6 col-12">
+            <div class="box">
+                <div class="box-header with-border d-flex justify-content-between">
+                    <a href="#" id="btnSubmit" onclick="myfuction()" class="btn btn-success">ذخیره</a>
+                    <a href="/Panel/ShowProducts" class="btn btn-danger">بازگشت</a>
+                </div>
+                <!-- /.box-header -->
+                <div class="form">
+                    <div class="box-body">
+                        @foreach (var item in Model)
+                        {
+                            string value = "ندارد";
+                            var productField = scope.GetProductField(item.FieldId, productID);
+                            if (productField != null)
+                            {
+                                value = productField.Value;
+                            }
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="ti-pencil"></i>
+                                            <label>@item.Field.Name</label>
+                                        </span>
+                                    </div>
+                                    <input id="@i" name="@i" value="@value" class="form-control" />
+                                </div>
+                            </div>
+                            i++;
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section ScriptManager
+{
+    <script type="text/javascript">
+
+        var myCount = @myCount;
+        var checker;
+        var result = "";
+
+        function myfuction() {
+            checker = 1;
+
+            for (var i = 0; i < myCount; i++) {
+                if (result == "") {
+                    result = document.getElementById(checker).value;
+                } else {
+                    result = result + "-" + document.getElementById(checker).value;
+                }
+                checker = checker + 1;
+            }
+            window.open("/Panel/UpdateProductFields/" + @productID + "?result=" + result,"_parent")
+        }
+
+    </script>
+}

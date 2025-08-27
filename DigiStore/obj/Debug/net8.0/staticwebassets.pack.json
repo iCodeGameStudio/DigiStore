@@ -1,0 +1,2173 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Account.css",
+      "PackagePath": "staticwebassets\\CSS\\Account.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\CategorySearch.css",
+      "PackagePath": "staticwebassets\\CSS\\CategorySearch.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Font.css",
+      "PackagePath": "staticwebassets\\CSS\\Font.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Menu.css",
+      "PackagePath": "staticwebassets\\CSS\\Menu.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Modal.css",
+      "PackagePath": "staticwebassets\\CSS\\Modal.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\SCSS\\_animated.scss",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\SCSS\\_animated.scss"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\SCSS\\_core.scss",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\SCSS\\_core.scss"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\SCSS\\_icons.scss",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\SCSS\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\SCSS\\_path.scss",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\SCSS\\_path.scss"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\_all-skins.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\_all-skins.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\animate.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\bootstrap-extend.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\bootstrap-extend.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\cryptocoins.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\cryptocoins.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\datatables.min.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\datatables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\daterangepicker.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\ekko-lightbox.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\ekko-lightbox.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\ekko-lightbox.min.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\ekko-lightbox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\ekko-lightbox.min.css.map",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\ekko-lightbox.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\flag-icon.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\flag-icon.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\flag-icon.min.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\flag-icon.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\font-awesome.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\glyphicon.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\glyphicon.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\ionicons.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\ionicons.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\ionicons.min.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\ionicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\linea.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\linea.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\master_style.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\master_style.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\master_style_dark.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\master_style_dark.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\master_style_rtl.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\master_style_rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\materialdesignicons.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\materialdesignicons.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\materialdesignicons.css.map",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\materialdesignicons.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\morris.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\morris.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\simple-line-icons.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\simple-line-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\Panel\\themify-icons.css",
+      "PackagePath": "staticwebassets\\CSS\\Panel\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\PersianDatePicker.css",
+      "PackagePath": "staticwebassets\\CSS\\PersianDatePicker.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\PersianDatePicker.min.css",
+      "PackagePath": "staticwebassets\\CSS\\PersianDatePicker.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\all.min.css",
+      "PackagePath": "staticwebassets\\CSS\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\app.css",
+      "PackagePath": "staticwebassets\\CSS\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\bootstrap.css",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\lobibox.css",
+      "PackagePath": "staticwebassets\\CSS\\lobibox.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\lobibox.min.css",
+      "PackagePath": "staticwebassets\\CSS\\lobibox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\styles.css",
+      "PackagePath": "staticwebassets\\CSS\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\CSS\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\CSS\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-chisel-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-chisel-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-chisel-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-chisel-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-900.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-900.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-light-300.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-light-300.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-thin-100.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-thin-100.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-duotone-thin-100.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-duotone-thin-100.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-etch-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-etch-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-etch-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-etch-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-jelly-duo-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-jelly-duo-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-jelly-duo-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-jelly-duo-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-jelly-fill-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-jelly-fill-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-jelly-fill-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-jelly-fill-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-jelly-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-jelly-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-jelly-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-jelly-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-light-300.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-light-300.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-notdog-duo-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-notdog-duo-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-notdog-duo-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-notdog-duo-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-notdog-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-notdog-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-notdog-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-notdog-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-light-300.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-light-300.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-thin-100.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-thin-100.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-duotone-thin-100.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-duotone-thin-100.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-light-300.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-light-300.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-thin-100.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-thin-100.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-sharp-thin-100.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-sharp-thin-100.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-slab-press-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-slab-press-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-slab-press-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-slab-press-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-slab-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-slab-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-slab-regular-400.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-slab-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-thin-100.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-thin-100.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-thin-100.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-thin-100.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-thumbprint-light-300.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-thumbprint-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-thumbprint-light-300.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-thumbprint-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-whiteboard-semibold-600.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-whiteboard-semibold-600.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fa-whiteboard-semibold-600.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fa-whiteboard-semibold-600.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\FontAwesome\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\FontAwesome\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Ionicons\\ionicons.eot",
+      "PackagePath": "staticwebassets\\Fonts\\Ionicons\\ionicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Ionicons\\ionicons.svg",
+      "PackagePath": "staticwebassets\\Fonts\\Ionicons\\ionicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Ionicons\\ionicons.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\Ionicons\\ionicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Ionicons\\ionicons.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Ionicons\\ionicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\eot\\IRANSansWeb.eot",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\eot\\IRANSansWeb.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\eot\\IRANSansWeb_Bold.eot",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\eot\\IRANSansWeb_Bold.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\eot\\IRANSansWeb_Light.eot",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\eot\\IRANSansWeb_Light.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\eot\\IRANSansWeb_Medium.eot",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\eot\\IRANSansWeb_Medium.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\eot\\IRANSansWeb_UltraLight.eot",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\eot\\IRANSansWeb_UltraLight.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\ttf\\IRANSansWeb.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\ttf\\IRANSansWeb.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\ttf\\IRANSansWeb_Bold.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\ttf\\IRANSansWeb_Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\ttf\\IRANSansWeb_Light.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\ttf\\IRANSansWeb_Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\ttf\\IRANSansWeb_Medium.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\ttf\\IRANSansWeb_Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\ttf\\IRANSansWeb_UltraLight.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\ttf\\IRANSansWeb_UltraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff2\\IRANSansWeb.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff2\\IRANSansWeb.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff2\\IRANSansWeb_Bold.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff2\\IRANSansWeb_Bold.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff2\\IRANSansWeb_Light.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff2\\IRANSansWeb_Light.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff2\\IRANSansWeb_Medium.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff2\\IRANSansWeb_Medium.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff2\\IRANSansWeb_UltraLight.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff2\\IRANSansWeb_UltraLight.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff\\IRANSansWeb.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff\\IRANSansWeb.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff\\IRANSansWeb_Bold.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff\\IRANSansWeb_Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff\\IRANSansWeb_Light.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff\\IRANSansWeb_Light.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff\\IRANSansWeb_Medium.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff\\IRANSansWeb_Medium.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Iransans\\woff\\IRANSansWeb_UltraLight.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Iransans\\woff\\IRANSansWeb_UltraLight.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.svg",
+      "PackagePath": "staticwebassets\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\MaterialDesignIcons\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\SimpleLine\\Simple-Line-Icons.eot",
+      "PackagePath": "staticwebassets\\Fonts\\SimpleLine\\Simple-Line-Icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\SimpleLine\\Simple-Line-Icons.svg",
+      "PackagePath": "staticwebassets\\Fonts\\SimpleLine\\Simple-Line-Icons.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\SimpleLine\\Simple-Line-Icons.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\SimpleLine\\Simple-Line-Icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\SimpleLine\\Simple-Line-Icons.woff",
+      "PackagePath": "staticwebassets\\Fonts\\SimpleLine\\Simple-Line-Icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\SimpleLine\\Simple-Line-Icons.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\SimpleLine\\Simple-Line-Icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Themify\\themify.eot",
+      "PackagePath": "staticwebassets\\Fonts\\Themify\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Themify\\themify.svg",
+      "PackagePath": "staticwebassets\\Fonts\\Themify\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Themify\\themify.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\Themify\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\Themify\\themify.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Themify\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\glyphicons\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\Fonts\\glyphicons\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\glyphicons\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\Fonts\\glyphicons\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\glyphicons\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\glyphicons\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\glyphicons\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\Fonts\\glyphicons\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Fonts\\glyphicons\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\Fonts\\glyphicons\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Ads\\4e3d7be09a824278a4ab72965cc009b5.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ads\\4e3d7be09a824278a4ab72965cc009b5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Ads\\c387a491c8e4498790624a13619d8bf6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ads\\c387a491c8e4498790624a13619d8bf6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Ads\\f8bdf315c3fd4c74bd2bf050e80dceed.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ads\\f8bdf315c3fd4c74bd2bf050e80dceed.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\06bc5c223d7948c48f743b942c2e5442.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\06bc5c223d7948c48f743b942c2e5442.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\0ff64ab94bf44a718ca3cae9e25da1f5.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\0ff64ab94bf44a718ca3cae9e25da1f5.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\1893aea39fed4cbfae63f2732e26cd28.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\1893aea39fed4cbfae63f2732e26cd28.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\22c8fe754ab44e0fa41a3a405b3f1645.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\22c8fe754ab44e0fa41a3a405b3f1645.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\2a16ecb6ab2e46bb9c7d0b0df2bcfcfe.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\2a16ecb6ab2e46bb9c7d0b0df2bcfcfe.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\6fedb4714ce3453b9fad05a78e1dc656.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\6fedb4714ce3453b9fad05a78e1dc656.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\a08c0466f95f4cae9583aae7f4c7a9c8.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\a08c0466f95f4cae9583aae7f4c7a9c8.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\b6f2904ac1a3455ba05f201610a1f287.jpg",
+      "PackagePath": "staticwebassets\\Images\\Brands\\b6f2904ac1a3455ba05f201610a1f287.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\bdf0da4fce084d4a9ef36bd2544952c8.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\bdf0da4fce084d4a9ef36bd2544952c8.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\d886a3b3cbd34b2a85a0a7bde34f802e.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\d886a3b3cbd34b2a85a0a7bde34f802e.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\db522e1a346d47a5914d51727f0ba423.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\db522e1a346d47a5914d51727f0ba423.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\dd9f4e39ae004f9ab59966e21c52b201.jpg",
+      "PackagePath": "staticwebassets\\Images\\Brands\\dd9f4e39ae004f9ab59966e21c52b201.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Brands\\f8c349a3ba124381bc7c71f203384454.png",
+      "PackagePath": "staticwebassets\\Images\\Brands\\f8c349a3ba124381bc7c71f203384454.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\06a3f4f79a434bd1bd57dfb4d1d010f8.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\06a3f4f79a434bd1bd57dfb4d1d010f8.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\0f89aad8cff146cda8d430531dd0286c.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\0f89aad8cff146cda8d430531dd0286c.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\3d4ef31c971d4fceaffd8a0b1d31e51d.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\3d4ef31c971d4fceaffd8a0b1d31e51d.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\4d745eafacd94e58b0450ee71021c730.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\4d745eafacd94e58b0450ee71021c730.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\5e999a5d1c384cc0a2dbde2809e88da4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\5e999a5d1c384cc0a2dbde2809e88da4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\7398425ff79947cd8b70dd34e20b588d.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\7398425ff79947cd8b70dd34e20b588d.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\7b5813064cfe4a2d952e85a1ca5db4d3.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\7b5813064cfe4a2d952e85a1ca5db4d3.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\814913a551a446e8b10a454a6cda6f55.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\814913a551a446e8b10a454a6cda6f55.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\8e2e58cfd4a84455be61c2511d6ca7aa.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\8e2e58cfd4a84455be61c2511d6ca7aa.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\8ec227e663ae401487503ae085b2849a.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\8ec227e663ae401487503ae085b2849a.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\95979698d4f54c2197bb8a4bd841881f.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\95979698d4f54c2197bb8a4bd841881f.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\9607cb90af8a4d968ca94ed95d363ea7.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\9607cb90af8a4d968ca94ed95d363ea7.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\aa933eebeb06426dae33cfdb417694bb.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\aa933eebeb06426dae33cfdb417694bb.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\b4caa8824cdc4e8da70a92cbbc30f4e4.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\b4caa8824cdc4e8da70a92cbbc30f4e4.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\b51a5fb31aa44490adcc6e84d8705d98.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\b51a5fb31aa44490adcc6e84d8705d98.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\c75c69115aff44f2b8394ea729f937da.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\c75c69115aff44f2b8394ea729f937da.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\d2de2d0651934a32b17569cb31849443.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\d2de2d0651934a32b17569cb31849443.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\dbd67e15b0ab4cd1a3b19a32facbf33a.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\dbd67e15b0ab4cd1a3b19a32facbf33a.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\dc1ede243eca493692bef1d0d2b3affa.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\dc1ede243eca493692bef1d0d2b3affa.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\e5b45d97a1064e3d81b40c026c11c3c9.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\e5b45d97a1064e3d81b40c026c11c3c9.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\f7c768cc7fea4f2db4f7e89ca7e1c6fb.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\f7c768cc7fea4f2db4f7e89ca7e1c6fb.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Galleries\\fd3f5aaea9864849b7627112f0e89147.png",
+      "PackagePath": "staticwebassets\\Images\\Galleries\\fd3f5aaea9864849b7627112f0e89147.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\1d2a7dafef064ea0b4ab84a77a4b06a6.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\1d2a7dafef064ea0b4ab84a77a4b06a6.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\1e040e5437bf4dd1a37bc6c30fc861d7.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\1e040e5437bf4dd1a37bc6c30fc861d7.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\5c5e520eb6134ded9014b47fefc7d061.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\5c5e520eb6134ded9014b47fefc7d061.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\627cf1a3577f4923aa155a1cdc6e8279.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\627cf1a3577f4923aa155a1cdc6e8279.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\63a1e47bc5bf455bbf5fd0956f31dd6f.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\63a1e47bc5bf455bbf5fd0956f31dd6f.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\67f52daab4824fe6be7a179d697fdbcf.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\67f52daab4824fe6be7a179d697fdbcf.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\73b628d8b5db4110a16ad94f83084a95.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\73b628d8b5db4110a16ad94f83084a95.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\7ab34172bf75439fb8293ec41bff2185.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\7ab34172bf75439fb8293ec41bff2185.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\88a91fc287ec436aaa80597f664f4fbc.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\88a91fc287ec436aaa80597f664f4fbc.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\8a90beefe7ac43afb9e8c12f0838847b.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\8a90beefe7ac43afb9e8c12f0838847b.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\8eae4dd98ac04531aea471f8bb367e0f.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\8eae4dd98ac04531aea471f8bb367e0f.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\9605cc82777148539b79a82cbd49e11f.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\9605cc82777148539b79a82cbd49e11f.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\9a165f30a3c042788fcdf39559d5d933.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\9a165f30a3c042788fcdf39559d5d933.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\a06a746987f74f33a60a49305d061251.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\a06a746987f74f33a60a49305d061251.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\a30753c3034a487eb975aaeb287a5ffe.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\a30753c3034a487eb975aaeb287a5ffe.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\c1d330522c7e420ab999199fa9b9d421.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\c1d330522c7e420ab999199fa9b9d421.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\c63ec1f5ce2b42dbb0b6753e4bb3f828.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\c63ec1f5ce2b42dbb0b6753e4bb3f828.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Products\\fd8de2f6359049899dd014693ad9c739.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\fd8de2f6359049899dd014693ad9c739.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\ADQ.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\ADQ.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\Spinner.gif",
+      "PackagePath": "staticwebassets\\Images\\Site\\Spinner.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\boxed-bg.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\boxed-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\icon-error.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\icon-error.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\icon-success.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\icon-success.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\icon-warning.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\icon-warning.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\logo-dark-text.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\logo-dark-text.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\logo-dark.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\logo-dark.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\logo-light-text.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\logo-light-text.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Site\\logo-light.png",
+      "PackagePath": "staticwebassets\\Images\\Site\\logo-light.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\051c0e6a101e4946bf412d03288e0c1e.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\051c0e6a101e4946bf412d03288e0c1e.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\063cb21b96204ecba34a1604a943aa51.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\063cb21b96204ecba34a1604a943aa51.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\0cae6375c6174818a0c8f9341b0658f6.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\0cae6375c6174818a0c8f9341b0658f6.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\1db532b8a664441dbb4e2a9d04b6b215.jpg",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\1db532b8a664441dbb4e2a9d04b6b215.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\27fd31720b014a4e91e0b23fc73e32ee.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\27fd31720b014a4e91e0b23fc73e32ee.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\2f644837cdbd4215883dcf500e329a97.gif",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\2f644837cdbd4215883dcf500e329a97.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\325879f4bb1f490e86fa48c57accf87c.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\325879f4bb1f490e86fa48c57accf87c.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\3868f8fccc9a44c59e51b86a5cf0aefb.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\3868f8fccc9a44c59e51b86a5cf0aefb.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\3ff98d63c2db412291e7480715f83866.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\3ff98d63c2db412291e7480715f83866.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\4b6df2296da94bc287ef14c18d3f0a1d.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\4b6df2296da94bc287ef14c18d3f0a1d.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\5bb38e6057894990b43fba6e4a630e31.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\5bb38e6057894990b43fba6e4a630e31.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\5f7695948d6f4d8eafbebe8c95f2c920.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\5f7695948d6f4d8eafbebe8c95f2c920.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\7ce9a86b3f48406586aa631fd5833343.jpg",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\7ce9a86b3f48406586aa631fd5833343.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\a49f986ea8f744e1b645b42208ad78fb.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\a49f986ea8f744e1b645b42208ad78fb.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\a4b002777c3846cc8cbec77b1949795f.jpg",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\a4b002777c3846cc8cbec77b1949795f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\a6e7d73b5ddd462281666ff66566273a.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\a6e7d73b5ddd462281666ff66566273a.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\abad5302482a4406a5510fd29b8a61e2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\abad5302482a4406a5510fd29b8a61e2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\c71cd46821c74626a819328e6622f03c.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\c71cd46821c74626a819328e6622f03c.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\cfac95fd105b4be88cb8d89306d0b8ab.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\cfac95fd105b4be88cb8d89306d0b8ab.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\d9244d16b4b040828c347e05465e83eb.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\d9244d16b4b040828c347e05465e83eb.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\db99d9f7b79a420f99875180d2c34c4d.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\db99d9f7b79a420f99875180d2c34c4d.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\df14c5a32f414e5ca99aa7370e93d944.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\df14c5a32f414e5ca99aa7370e93d944.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\f1d0cdfc68b248d789844a6af2bb8ce1.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\f1d0cdfc68b248d789844a6af2bb8ce1.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Sliders\\f611afe89620456ca5c178b422344b77.png",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\f611afe89620456ca5c178b422344b77.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\3.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\5.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\7.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\8.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\Amazing.svg",
+      "PackagePath": "staticwebassets\\Images\\Test\\Amazing.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\aparat.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\aparat.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\app-sibapp.svg",
+      "PackagePath": "staticwebassets\\Images\\Test\\app-sibapp.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\bale.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\bale.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-1.webp",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-11.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-3.webp",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-33.webp",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-33.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-4.webp",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-4.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-four-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-four-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-four-3.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-four-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\banner-four-4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\banner-four-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\bazar-app.svg",
+      "PackagePath": "staticwebassets\\Images\\Test\\bazar-app.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\blog-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\blog-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\blog-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\blog-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\brand1-1.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\brand1-1.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\brand1-2.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\brand1-2.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\brand1-3.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\brand1-3.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\brand1-4.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\brand1-4.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\brand1-5.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\brand1-5.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\brand1-6.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\brand1-6.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\digitall.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\digitall.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\eitta.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\eitta.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\enamad.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\enamad.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\gaming.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\gaming.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\google-play-app.svg",
+      "PackagePath": "staticwebassets\\Images\\Test\\google-play-app.svg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\headset.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\headset.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\home.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\home.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\igap.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\igap.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\incredible.webp",
+      "PackagePath": "staticwebassets\\Images\\Test\\incredible.webp"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\laptop-1.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\laptop-1.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\laptop-2.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\laptop-2.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\laptop-3.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\laptop-3.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\laptop-4.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\laptop-4.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\laptop-5.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\laptop-5.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\laptop-6.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\laptop-6.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\mobile-1.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\mobile-1.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\mobile-2.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\mobile-2.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\mobile-3.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\mobile-3.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\mobile-4.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\mobile-4.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\mobile-5.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\mobile-5.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\mobile-6.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\mobile-6.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\namad-01.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\namad-01.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\personal.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\personal.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\rubika.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\rubika.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\slider-2-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\slider-2-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\slider-2-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\slider-2-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\slider-2-3.jpg",
+      "PackagePath": "staticwebassets\\Images\\Test\\slider-2-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\sorush.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\sorush.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\speaker.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\speaker.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\sport.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\sport.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\television-1.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\television-1.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\television-2.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\television-2.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\television-3.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\television-3.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\television-4.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\television-4.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\wach-1.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\wach-1.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\wach-2.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\wach-2.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\wach-3.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\wach-3.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\wach-4.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\wach-4.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Test\\wach.png",
+      "PackagePath": "staticwebassets\\Images\\Test\\wach.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Admin.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Admin.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Avatar.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\175d3c7372e440c7a7bcada786cc314c.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\175d3c7372e440c7a7bcada786cc314c.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\2addb130792049239ca67ff3ad3c0d3a.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\2addb130792049239ca67ff3ad3c0d3a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\32787bed23e64848ba7c0794e00a6b62.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\32787bed23e64848ba7c0794e00a6b62.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\59d8258875234911bcbd1a2f66b3f679.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\59d8258875234911bcbd1a2f66b3f679.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\606885b1d12540019268d5b453d0d80e.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\606885b1d12540019268d5b453d0d80e.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\622bab25a6f4445f9264078f5e2e08cc.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\622bab25a6f4445f9264078f5e2e08cc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\8143451942974e788d4ca499479db71c.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\8143451942974e788d4ca499479db71c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\8194490555484230998a7678834ffb25.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\8194490555484230998a7678834ffb25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\8906e1102be1455ba054c8187fcf0c49.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\8906e1102be1455ba054c8187fcf0c49.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\894ada48d38a4b0da63da8e560fbc5cf.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\894ada48d38a4b0da63da8e560fbc5cf.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\bbac2eabfb5b41bba4c8390592adea8d.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\bbac2eabfb5b41bba4c8390592adea8d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\d0822ea2e55f44469c306cd753880ba8.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\d0822ea2e55f44469c306cd753880ba8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\e4ed9106649a47edb54ebde702470968.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\e4ed9106649a47edb54ebde702470968.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\eda06f1d4ba74a7cb9713e6be915922d.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\eda06f1d4ba74a7cb9713e6be915922d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\Stores\\f48c09f63e20454cb35013ff00ad0a43.png",
+      "PackagePath": "staticwebassets\\Images\\Users\\Stores\\f48c09f63e20454cb35013ff00ad0a43.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\Images\\Users\\user-info.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\user-info.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\BindForms.js",
+      "PackagePath": "staticwebassets\\JS\\BindForms.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\bootstrap.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\JS\\Panel\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\chart.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\dashboard.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\datatables.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\datatables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\daterangepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\demo.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\fastclick.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\fastclick.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery-3.3.1.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery-3.3.1.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery-3.3.1.slim.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery-3.3.1.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery-3.3.1.slim.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery-3.3.1.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery.slimscroll.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery.slimscroll.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\jquery.slimscroll.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\jquery.slimscroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\moment.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\morris.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\morris.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\popper.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\popper.min.js.map",
+      "PackagePath": "staticwebassets\\JS\\Panel\\popper.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\raphael.min.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\raphael.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\Panel\\template.js",
+      "PackagePath": "staticwebassets\\JS\\Panel\\template.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\PersianDatePicker.js",
+      "PackagePath": "staticwebassets\\JS\\PersianDatePicker.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\PersianDatePicker.min.js",
+      "PackagePath": "staticwebassets\\JS\\PersianDatePicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\SearchTable.js",
+      "PackagePath": "staticwebassets\\JS\\SearchTable.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\app.js",
+      "PackagePath": "staticwebassets\\JS\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\JS\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\JS\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\jquery-lobibox.1.2.4.min.js",
+      "PackagePath": "staticwebassets\\JS\\jquery-lobibox.1.2.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\persiannumber.js",
+      "PackagePath": "staticwebassets\\JS\\persiannumber.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\story-player.js",
+      "PackagePath": "staticwebassets\\JS\\story-player.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\JS\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\JS\\swiper-script.js",
+      "PackagePath": "staticwebassets\\JS\\swiper-script.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\adapters\\jquery.js",
+      "PackagePath": "staticwebassets\\ckeditor\\adapters\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\build-config.js",
+      "PackagePath": "staticwebassets\\ckeditor\\build-config.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\ckeditor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\config.js",
+      "PackagePath": "staticwebassets\\ckeditor\\config.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\contents.css",
+      "PackagePath": "staticwebassets\\ckeditor\\contents.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\about.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\about.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\hidpi\\logo_ckeditor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\hidpi\\logo_ckeditor.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\dialog\\dialogDefinition.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\dialog\\dialogDefinition.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\div\\dialogs\\div.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\div\\dialogs\\div.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\find\\dialogs\\find.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\find\\dialogs\\find.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\flash\\dialogs\\flash.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\flash\\dialogs\\flash.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\flash\\images\\placeholder.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\flash\\images\\placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\button.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\button.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\form.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\form.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\radio.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\radio.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\select.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\select.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\textarea.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\textarea.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\textfield.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\textfield.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\icons.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\icons.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\icons_hidpi.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\icons_hidpi.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\iframe\\images\\placeholder.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\iframe\\images\\placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\image\\dialogs\\image.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\image\\dialogs\\image.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\image\\images\\noimage.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\image\\images\\noimage.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\link\\dialogs\\anchor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\dialogs\\anchor.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\link\\dialogs\\link.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\dialogs\\link.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\link\\images\\anchor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\images\\anchor.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\link\\images\\hidpi\\anchor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\images\\hidpi\\anchor.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon-rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon-rtl.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\icon-rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\icon-rtl.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\icon.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\pastefromword\\filter\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastefromword\\filter\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\preview\\preview.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\preview\\preview.html"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\scayt\\dialogs\\options.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\dialogs\\options.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_address.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_address.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_div.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_div.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h1.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h1.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h2.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h2.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h3.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h3.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h4.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h4.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h5.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h5.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h6.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h6.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_p.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_p.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_pre.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_pre.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angel_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angel_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angry_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angry_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\broken_heart.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\broken_heart.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\confused_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\confused_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\cry_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\cry_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\devil_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\devil_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\envelope.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\envelope.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\envelope.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\envelope.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\heart.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\heart.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\heart.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\kiss.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\kiss.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\kiss.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\kiss.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\lightbulb.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\lightbulb.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\omg_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\omg_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\regular_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\regular_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\sad_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\sad_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\shades_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\shades_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\teeth_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\teeth_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_down.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_down.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_up.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_up.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\tongue_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\tongue_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\tongue_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\tongue_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\wink_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\wink_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\table\\dialogs\\table.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\table\\dialogs\\table.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\templates\\dialogs\\templates.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\dialogs\\templates.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\templates\\dialogs\\templates.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\dialogs\\templates.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\wsc\\LICENSE.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\wsc\\README.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\ciframe.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\ciframe.html"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\tmpFrameset.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\tmpFrameset.html"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\wsc.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\wsc.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\wsc.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\wsc.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\wsc_ie.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\wsc_ie.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\dialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\dialog.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\dialog_ie.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\dialog_ie.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\dialog_ie7.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\dialog_ie7.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\dialog_ie8.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\dialog_ie8.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\dialog_iequirks.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\dialog_iequirks.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\editor.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\editor.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\editor_gecko.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\editor_gecko.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\editor_ie.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\editor_ie.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\editor_ie7.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\editor_ie7.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\editor_ie8.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\editor_ie8.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\editor_iequirks.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\editor_iequirks.css"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\icons.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\icons.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\icons_hidpi.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\icons_hidpi.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\arrow.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\hidpi\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\hidpi\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\hidpi\\lock-open.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\hidpi\\lock-open.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\hidpi\\lock.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\hidpi\\lock.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\hidpi\\refresh.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\hidpi\\refresh.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\lock-open.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\lock-open.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\lock.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\lock.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\images\\refresh.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\images\\refresh.png"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\skins\\moono\\readme.md",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono\\readme.md"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\ckeditor\\styles.js",
+      "PackagePath": "staticwebassets\\ckeditor\\styles.js"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-duotone-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-duotone-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-duotone-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-duotone-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-light-300.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-light-300.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-light-300.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-light-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-light-300.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-thin-100.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-thin-100.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-sharp-thin-100.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-sharp-thin-100.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-thin-100.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-thin-100.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-thin-100.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-thin-100.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crack\\source\\repos\\DigiStore\\wwwroot\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DigiStore.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DigiStore.props",
+      "PackagePath": "build\\DigiStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DigiStore.props",
+      "PackagePath": "buildMultiTargeting\\DigiStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DigiStore.props",
+      "PackagePath": "buildTransitive\\DigiStore.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

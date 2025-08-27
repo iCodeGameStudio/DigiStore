@@ -1,0 +1,55 @@
+﻿@model DigiStore.DataAccessLayer.Entities.Product
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+<div class="card border-0 rounded" style="max-width: 100%; margin: auto;">
+    <!-- تصویر محصول -->
+    <img src="~/Images/Products/@Model.Image"
+         alt="@Model.Name"
+         class="card-img-top img-fluid"
+         style="border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem; max-height: 300px; object-fit: cover;" />
+
+    <!-- نام محصول -->
+    <div class="card-body text-center">
+        <h5 class="card-title mb-0">
+            <i class="fa fa-cube text-primary mr-2"></i>@Model.Name
+        </h5>
+    </div>
+
+    <!-- جزئیات محصول -->
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-tags text-success mr-2"></i> قیمت</span>
+            <strong class="text-success">@Model.Price.ToString("n0") ريال</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-tag text-danger mr-2"></i> قیمت قدیم</span>
+            <span class="text-muted">@(Model.DeletePrice.ToString("n0") ?? "-") ريال</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-archive text-warning mr-2"></i> موجودی</span>
+            <span>@Model.Exist</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-industry text-info mr-2"></i> برند</span>
+            <span>@Model.Brand.Name</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-list-alt text-secondary mr-2"></i> دسته</span>
+            <span>@Model.Category.Name</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-list-alt text-secondary mr-2"></i> توضیحات</span>
+            <span> @Html.Raw(Model.Description) </span>
+        </li>
+    </ul>
+</div>

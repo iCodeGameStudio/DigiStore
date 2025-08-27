@@ -1,0 +1,20 @@
+﻿@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+
+<form asp-action="DeleteField" id="MyForm" method="post">
+    <h4 class="form-group">آیا مایلید حذف شود؟</h4>
+
+    <div class="form-group">
+        <input type="submit" value="حذف شود" class="btn btn-danger btn-block" />
+    </div>
+</form>

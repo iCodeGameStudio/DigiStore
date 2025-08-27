@@ -1,0 +1,64 @@
+﻿@model DigiStore.Core.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "ورود به حساب کاربری";
+    Layout = "~/Views/Shared/_Account.cshtml";
+}
+<h4 class="fs-6 fw-normal text-center text-secondary mb-4">ورود به حساب کاربری</h4>
+<hr /> 
+<form asp-action="Login" id="Login" method="post">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+            <strong>@TempData["SuccessTitle"]</strong> - @TempData["SuccessMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="بستن">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+            <strong>@TempData["ErrorTitle"]</strong> - @TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="بستن">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <div class="row gy-2 overflow-hidden">
+        <div class="col-12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Mobile" class="form-control form-control-lg persian-numbers" placeholder="شماره موبایل مثال:۰۹۱۲۱۰۰۲۲۳۳" autofocus="true" />
+                <span asp-validation-for="Mobile" class="text-danger validation-error"></span>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="class=" form-floating mb-3"">
+                <input asp-for="Password" class="form-control form-control-lg" placeholder="گذرواژه" />
+                <span asp-validation-for="Password" class="text-danger validation-error"></span>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="d-grid my-3">
+                <input type="submit" value="ورود" class="btn-lg btn-block btn-sumbit" />
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="class=" form-floating mb-3"">
+                <p class="m-0 text-secondary text-center"><a href="/Accounts/Forget" class="link-primary text-decoration-none">گذرواژه ام را فراموش کرده ام</a></p>
+            </div>
+        </div>
+       
+            <div class="col-12">
+            <div class="d-grid my-3">
+                <p class="m-0 text-secondary text-center"><a href="/Accounts/Register" class="link-primary text-decoration-none">عضویت در سایت</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+</form>
+

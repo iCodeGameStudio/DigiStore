@@ -1,0 +1,58 @@
+﻿@model DigiStore.DataAccessLayer.Entities.Coupon
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        Context.Response.Redirect("/");
+        return;
+    }
+    Layout = null;
+}
+
+<div class="card border-0 rounded" style="max-width: 100%; margin: auto;">
+    <div class="card-body text-center">
+        <h5 class="card-title mb-0">
+            نام کوپن تخفیف 
+            <i class="fa fa-cube text-primary mr-2"></i>@Model.Name
+        </h5>
+    </div>
+    <ul class="list-group list-group-flush">     
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-tag text-danger mr-2"></i> کد کوپن تخفیف</span>
+            <span class="text-muted">@Model.Code</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-archive text-warning mr-2"></i> تاریخ شروع کوپن تخفیف</span>
+            <span>@Model.StartDate</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-industry text-info mr-2"></i> تاریخ پایان کوپن تخفیف</span>
+            <span>@Model.EndDate</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-list-alt text-secondary mr-2"></i> درصد تخفیف</span>
+            <span>@Model.Percent</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-tags text-success mr-2"></i> مبلغ تخفیف</span>
+            <strong class="text-success">@Model.Price.ToString("n0") ريال</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-list-alt text-secondary mr-2"></i> سایر توضیحات</span>
+            <span> @Html.Raw(Model.Description) </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fa fa-list-alt text-secondary mr-2"></i> وضعیت کوپن</span>
+
+            @if (Model.IsExpire)
+            {
+                <span class="badge badge-danger"><i class="fa fa-times-circle mr-1"></i> منقضی</span>
+            }
+            else
+            {
+                <span class="badge badge-success"><i class="fa fa-check-circle mr-1"></i> فعال</span>
+            }
+        </li>
+    </ul>
+</div>

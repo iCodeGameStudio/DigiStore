@@ -1,0 +1,109 @@
+﻿@model DigiStore.Core.ViewModels.ProductAdminViewModel
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+<div class="card border-0 rounded-3 overflow-hidden">
+    <!-- مشخصات عمومی محصول -->
+    <div class="card-body">
+        <div class="row mb-5 text-center">
+            <!-- فاصله بیشتر بین ردیف‌ها -->
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-tag text-facebook mr-1"></i> نام محصول:</strong>
+                <span class="h6">@Model.FillProduct.Name</span>
+            </div>
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-industry text-facebook mr-1"></i> برند:</strong>
+                <span class="h6">@Model.FillProduct.Brand?.Name</span>
+            </div>
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-list text-facebook mr-1"></i> دسته:</strong>
+                <span class="h6">@Model.FillProduct.Category?.Name</span>
+            </div>
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-shopping-bag text-facebook mr-1"></i> فروشگاه:</strong>
+                <span class="h6">@Model.FillProduct.Store?.Name</span>
+            </div>
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-calendar text-facebook mr-1"></i> تاریخ ثبت:</strong>
+                <span class="h6">@Model.FillProduct.Date</span>
+            </div>
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-clock-o text-facebook mr-1"></i> ساعت ثبت:</strong>
+                <span class="h6">@Model.FillProduct.Time</span>
+            </div>
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-cubes text-facebook mr-1"></i> موجودی:</strong>
+                <span class="h6">@Model.FillProduct.Exist</span>
+            </div>
+            <div class="col-md-6 mb-4">
+                <strong class="h5"><i class="fa fa-eye text-facebook mr-1"></i> وضعیت نمایش:</strong>
+                @if (Model.FillProduct.NotShow)
+                {
+                    <span class="badge badge-danger"><i class="fa fa-times-circle mr-1"></i> عدم نمایش</span>
+                }
+                else
+                {
+                    <span class="badge badge-success"><i class="fa fa-check-circle mr-1"></i> نمایش</span>
+                }
+            </div>
+        </div>
+
+        <br />
+
+        <!-- جدول مشخصات فنی -->
+        <h5 class="text-facebook text-center mt-4 mb-3"><i class="fa fa-list-alt mr-1"></i> مشخصات فنی</h5>
+        <hr class="hr-sm" />
+        <div style="max-height:250px; overflow-y:auto;">
+            <table class="table table-striped table-bordered text-center">
+                <thead style="background-color:darkslategrey;color:white">
+                    <tr>
+                        <th class="h6"><i class="fa fa-cogs mr-1"></i> نام مشخصه</th>
+                        <th class="h6"><i class="fa fa-sliders-h mr-1"></i> مقدار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.FillFields)
+                    {
+                        <tr>
+                            <td class="h6">@Html.DisplayFor(modelItem => item.Field.Name)</td>
+                            <td class="h6">@Html.DisplayFor(modelItem => item.Value)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <hr />
+
+        <!-- گالری تصاویر -->
+        <h5 class="text-facebook text-center mt-5 mb-3"><i class="fa fa-image mr-1"></i> گالری تصاویر</h5>
+        <hr class="hr-sm" />
+        <div style="max-height:250px; overflow-y:auto;">
+            <div class="row">
+                @foreach (var item in Model.FillGalleries)
+                {
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card gallery-card shadow-sm border-0 rounded-3 overflow-hidden">
+                            <img src="~/Images/Galleries/@item.Image"
+                                 class="img-fluid gallery-img"
+                                 alt="تصویر محصول"
+                                 style="transition: transform .3s; cursor: pointer;"
+                                 onmouseover="this.style.transform='scale(1.05)'"
+                                 onmouseout="this.style.transform='scale(1)'" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

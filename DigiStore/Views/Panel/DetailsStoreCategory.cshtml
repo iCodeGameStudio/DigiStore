@@ -1,0 +1,17 @@
+﻿@model DigiStore.DataAccessLayer.Entities.StoreCategory
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+
+<h5 class="text-center">@Html.Raw(Model.Description)</h5>
+

@@ -1,0 +1,327 @@
+﻿/*
+  کدهای CSS مودال بوت‌استرپ ۵ - نسخه مستقل و ضروری
+*/
+
+/* ۱. پس‌زمینه (Backdrop) */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+    .modal-backdrop.show {
+        opacity: 0.5;
+    }
+
+
+/* ۲. کانتینر اصلی مودال (.modal) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none; /* در حالت عادی مخفی است */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+
+
+/* ۳. کادر محاوره (.modal-dialog) */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+    transition: transform 0.3s ease-out;
+    transform: translateY(-50px); /* انیمیشن از بالا به پایین */
+}
+/* وقتی مودال نمایش داده می‌شود، انیمیشن اجرا می‌شود */
+.modal.show .modal-dialog {
+    transform: none;
+}
+/* برای وسط‌چین کردن عمودی */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+
+/* ۴. محتوای مودال (.modal-content, .modal-header, etc.) */
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #212529;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+    /* دکمه‌های داخل فوتر */
+    .modal-footer > * {
+        margin: 0.25rem;
+    }
+
+
+/* ۵. دکمه بستن (.btn-close) */
+.btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    color: #000;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.375rem;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+    .btn-close:hover {
+        opacity: 0.75;
+    }
+
+    .btn-close:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        opacity: 1;
+    }
+
+
+/* ۶. استایل‌های واکنش‌گرا (Responsive) */
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+}
+/* سایز بزرگ */
+@media (min-width: 992px) {
+    .modal-lg {
+        max-width: 800px;
+    }
+}
+
+
+/*
+  کدهای CSS جداول بوت‌استرپ ۵ - نسخه مستقل
+*/
+
+/* ۱. استایل پایه جدول (.table) */
+/*.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+    border-collapse: collapse;
+}*/
+
+    /* استایل مشترک برای تمام سلول‌ها (th و td) */
+    /*.table > :not(caption) > * > * {
+        padding: 0.75rem 0.75rem;
+        background-color: transparent;
+        border-bottom-width: 1px;
+    }*/
+
+    /* استایل سربرگ جدول (thead) */
+    /*.table > thead {
+        vertical-align: bottom;
+    }
+
+    .table thead th {*/
+        /* خط زیرین سربرگ ضخیم‌تر است */
+        /*border-bottom-width: 2px;
+    }*/
+
+
+/* ۲. کلاس‌های Modifier برای تغییر ظاهر جدول */
+
+/* جدول خط‌دار (Zebra-striped) */
+/*.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(0, 0, 0, 0.05);
+}*/
+
+/* افکت هاور روی ردیف‌های جدول */
+/*.table-hover > tbody > tr:hover > * {
+    background-color: rgba(0, 0, 0, 0.075);
+}*/
+
+/* جدول حاشیه‌دار */
+/*.table-bordered > :not(caption) > * {
+    border-width: 1px 0;
+}
+
+    .table-bordered > :not(caption) > * > * {
+        border-width: 0 1px;
+    }*/
+
+
+/* ۳. جدول واکنش‌گرا (Responsive) */
+/* این کلاس باید روی یک div دور جدول قرار بگیرد */
+/*.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;*/ /* برای اسکرول نرم در iOS */
+/*}*/
+
+
+/* ۱. استایل‌های Card */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 0.375rem; /* معادل .rounded-lg در بوت‌استرپ ۴ */
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+
+/* ۲. استایل‌های جدول (مشابه پاسخ قبلی + thead-dark) */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+    border-collapse: collapse;
+}
+
+    .table > :not(caption) > * > * {
+        padding: 0.75rem 0.75rem;
+        background-color: transparent;
+        border-bottom-width: 1px;
+    }
+
+    .table > thead {
+        vertical-align: bottom;
+    }
+
+/* جدول خط‌دار */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* افکت هاور روی ردیف‌ها */
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* استایل aklhds سربرگ تیره (thead-dark) - بازسازی شده از بوت‌استرپ ۴ */
+.thead-dark th {
+    color: #fff;
+    background-color: #343a40; /* رنگ تیره استاندارد */
+    border-color: #454d55;
+}
+
+/* جدول واکنش‌گرا */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* ۳. کلاس‌های کمکی (Utility Classes) */
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.border-0 {
+    border: 0 !important;
+}
+
+.rounded-3 {
+    border-radius: 0.5rem !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.p-5 {
+    padding: 3rem !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* این کلاس مربوط به Font Awesome است اما برای کامل بودن اضافه شده */
+.fa-2x {
+    font-size: 2em;
+}

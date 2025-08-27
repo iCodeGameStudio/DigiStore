@@ -1,0 +1,129 @@
+﻿
+body {
+    margin: auto;
+    font-family: 'Iransans';
+    background-color: whitesmoke;
+}
+
+section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+a {
+    color: #3552dc;
+    transition: color 0.4s ease;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+.logo {
+    max-height: 80px;
+    max-width: 80px;
+}
+
+
+/* استایل کلی input‌ها */
+input.form-control {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    color: #333;
+}
+
+    input.form-control:focus {
+        border-color: #008999;
+        box-shadow: 0 0 5px rgba(0, 137, 153, 0.4);
+        outline: none;
+    }
+
+/* استایل خطاها */
+.validation-error {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+input.input-validation-error {
+    border-color: #dc3545 !important; /* قرمز Bootstrap */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.3);
+}
+
+/* دکمه ثبت */
+.btn-sumbit {
+    color: white;
+    background: #dc3545;
+    border: 1px solid #017203;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.4s ease;
+}
+
+    .btn-sumbit:hover {
+        background: #000;
+    }
+
+.loading {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+    .loading div {
+        background-color: Lavender;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+        .loading div img {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+        }
+
+body.blurred *:not(#overlay):not(#loading):not(#loading *) {
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+/* پس‌زمینه تار */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 9998;
+}
+/* نمایش بهتر در موبایل */
+@media (max-width: 576px) {
+    input.form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-sumbit {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

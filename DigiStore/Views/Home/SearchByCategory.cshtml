@@ -1,0 +1,318 @@
+﻿@model DigiStore.Core.ViewModels.SearchCategoryViewModel
+
+@{
+    ViewData["Title"] = "دیجی استور";
+    Layout = "~/Views/Shared/_Site.cshtml";
+}
+
+<div class="my-app-container">
+    <aside class="my-app-sidebar">
+        <div class="my-app-filter-box" id="my-app-category-filter">
+            <h3>فیلتر دسته بندی ها</h3>
+            <div class="my-app-accordion">
+                <div class="my-app-accordion-item">
+                    <button type="button" class="my-app-accordion-header">دسته‌بندی</button>
+                    <div class="my-app-accordion-content">
+
+                        <div class="my-app-accordion-item">
+                            <button type="button" class="my-app-accordion-header">@Model.FillParentCategory.Name</button>
+                            <div class="my-app-accordion-content">
+
+                                <div class="my-app-accordion-item">
+                                    <button type="button" class="my-app-accordion-header">@Model.FillSelectCategory.Name</button>
+                                    <div class="my-app-accordion-content">
+                                        @foreach (var item in Model.FillCategories.Where(c => c.Id != Model.FillSelectCategory.Id))
+                                        {
+                                            <a href="/Home/SearchByCategory/@item.Id">@item.Name</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- بخش فیلترها -->
+        <div class="my-app-filter-box">
+            <h3>فیلترها</h3>
+            <div class="my-app-switch-control">
+                <label for="my-app-available">موجود در انبار</label>
+                <label class="my-app-switch">
+                    <input type="checkbox" id="my-app-available">
+                    <span class="my-app-slider"></span>
+                </label>
+            </div>
+            <div class="my-app-switch-control">
+                <label for="my-app-discounted">فقط تخفیف‌دارها</label>
+                <label class="my-app-switch">
+                    <input type="checkbox" id="my-app-discounted">
+                    <span class="my-app-slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- فروشندگان -->
+        <div class="my-app-filter-box" id="my-app-seller-filter">
+            <h3>فروشندگان</h3>
+            <div class="my-app-accordion">
+                <div class="my-app-accordion-item">
+                    <button type="button" class="my-app-accordion-header">فروشندگان این محصول</button>
+                    <div class="my-app-accordion-content">
+                        <div class="my-app-accordion-item">
+                            @foreach (var item in Model.FillStores)
+                            {
+                                <a href="#">@item.Name</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="my-app-products-grid">
+        @foreach (var item in Model.FillProducts)
+        {
+            <a href="#" class="my-app-product-card">
+                <img src="~/Images/Products/@item.Image" alt="@item.Name">
+                <div class="my-app-product-info">
+                    <h4 class="my-app-product-title">@item.Name</h4>
+                </div>
+                <div class="my-app-product-footer">
+                    <div class="my-app-price-section">
+                        @if (item.DeletePrice != 0)
+                        {
+                            <span class="my-app-old-price">@item.DeletePrice.ToString("n0") ریال</span>
+                        }
+                        <span class="my-app-current-price">@item.Price.ToString("n0") ریال</span>
+                    </div>
+                    <div class="my-app-meta-section">
+                        <span class="my-app-store-name">@item.Store.Name</span>
+                        @if (item.DeletePrice != 0)
+                        {
+                            var discountPercent = (int)Math.Round(((decimal)item.DeletePrice - item.Price) * 100 / item.DeletePrice);
+                            <span class="my-app-discount-badge">@discountPercent%</span>
+                        }
+                    </div>
+                </div>
+            </a>
+        }
+    </main>
+</div>
+
+@section ScriptManager {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const headers = document.querySelectorAll('.my-app-accordion-header');
+
+            headers.forEach(header => {
+                header.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const item = header.closest('.my-app-accordion-item');
+                    const content = item.querySelector(':scope > .my-app-accordion-content');
+                    if (!content) return;
+
+                    const isOpen = item.classList.contains('my-app-active');
+
+                    if (isOpen) {
+                        item.classList.remove('my-app-active');
+                        content.style.maxHeight = '0';
+                    } else {
+                        item.classList.add('my-app-active');
+                        content.style.maxHeight = getContentHeight(content) + 'px';
+                    }
+
+                    // آپدیت والدها برای آکاردیون‌های چندسطحی
+                    updateParentHeights(item);
+                });
+            });
+
+            function getContentHeight(content) {
+                // ارتفاع واقعی محتوا شامل padding و همه عناصر داخلش
+                const children = Array.from(content.children);
+                let totalHeight = 0;
+
+                children.forEach(child => {
+                    const childStyle = window.getComputedStyle(child);
+                    const marginTop = parseInt(childStyle.marginTop) || 0;
+                    const marginBottom = parseInt(childStyle.marginBottom) || 0;
+                    totalHeight += child.offsetHeight + marginTop + marginBottom;
+
+                    // اگر خود child یک آکاردیون-item باز است، محتوای داخلی آن را هم اضافه کن
+                    if (child.classList.contains('my-app-accordion-item') && child.classList.contains('my-app-active')) {
+                        const innerContent = child.querySelector(':scope > .my-app-accordion-content');
+                        if (innerContent) {
+                            totalHeight += getContentHeight(innerContent);
+                        }
+                    }
+                });
+
+                const style = window.getComputedStyle(content);
+                totalHeight += parseInt(style.paddingTop) || 0;
+                totalHeight += parseInt(style.paddingBottom) || 0;
+
+                return totalHeight;
+            }
+
+            function updateParentHeights(element) {
+                setTimeout(() => {
+                    let parentItem = element.parentElement.closest('.my-app-accordion-item');
+
+                    while (parentItem) {
+                        if (parentItem.classList.contains('my-app-active')) {
+                            const parentContent = parentItem.querySelector(':scope > .my-app-accordion-content');
+                            if (parentContent) {
+                                parentContent.style.maxHeight = getContentHeight(parentContent) + 'px';
+                            }
+                        }
+                        parentItem = parentItem.parentElement.closest('.my-app-accordion-item');
+                    }
+                }, 0);
+            }
+            /**
+             * منطق سایدبار چسبان (Sticky)
+             * سایدبار را هنگام اسکرول ثابت نگه می‌دارد و از تداخل آن با فوتر جلوگیری می‌کند
+             */
+            const setupStickySidebar = () => {
+                const sidebar = document.querySelector('.my-app-sidebar');
+                const footer = document.querySelector('.my-app-site-footer');
+
+                // اگر عناصر مورد نیاز وجود نداشتند یا در حالت موبایل بودیم، اجرا نمی‌شود
+                if (!sidebar || !footer || window.innerWidth <= 992) return;
+
+                const initialTopOffset = parseInt(window.getComputedStyle(sidebar).top, 10);
+
+                window.addEventListener('scroll', () => {
+                    const sidebarRect = sidebar.getBoundingClientRect();
+                    const footerRect = footer.getBoundingClientRect();
+
+                    // نقطه‌ای که پایین سایدبار به بالای فوتر می‌رسد
+                    const stopPoint = footerRect.top - sidebarRect.height - initialTopOffset;
+
+                    // اگر سایدبار در حال برخورد با فوتر است
+                    if (stopPoint <= 0) {
+                        // با استفاده از transform سایدبار را به سمت بالا حرکت می‌دهیم تا روی فوتر نرود
+                        sidebar.style.transform = `translateY(${stopPoint}px)`;
+                    } else {
+                        // در حالت عادی، سایدبار در جای خود باقی می‌ماند
+                        sidebar.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            setupStickySidebar();
+
+        });
+    </script>
+
+}
+
+
+
+@* <div class="shop-layout-container">
+    <!-- بخش اصلی محتوا و محصولات -->
+    <main class="shop-items-display">
+
+        @foreach (var item in Model.FillProducts)
+        {
+            <a href="#">
+                <div class="shop-item-wrapper">
+                    <img src="~/Images/Products/@item.Image" alt="@item.Name">
+                    <h3>@item.Name</h3>
+                    <p class="shop-item-price">@item.Price.ToString("n0") ریال</p>
+                </div>
+            </a>
+        }
+
+    </main>
+
+    <!-- کانتینر اصلی برای تمام پنل‌های فیلتر -->
+    <aside class="all-filters-container">
+        <!-- پنل فیلتر اصلی (دسته‌بندی، برند، ارسال) -->
+        <div class="shop-filter-panel-section">
+            <h2>فیلترها</h2>
+
+            <div class="shop-filter-section">
+                <h3>دسته‌بندی</h3>
+                <ul class="accordion-menu">
+                    <li><a href="#">همه کالاها</a></li>
+
+                    <li class="shop-nav-dropdown">
+                        <a href="#" class="accordion-toggle">
+                            @Model.FillParentCategory.Name
+                            <span class="accordion-arrow"></span>
+                        </a>
+                        <ul class="shop-nav-submenu">
+                            <li class="shop-nav-dropdown">
+                                <a href="#" class="accordion-toggle shop-link-current">
+                                    @Model.FillSelectCategory.Name
+                                    <span class="accordion-arrow"></span>
+                                </a>
+                                <ul class="shop-nav-submenu">
+                                    <li>
+                                        @foreach (var item in Model.FillCategories.Where(c => c.Id != Model.FillSelectCategory.Id))
+                                        {
+                                            <a href="/Home/SearchByCategory/@item.Id">@item.Name</a>
+                                        }
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="shop-filter-section">
+                <h3>برند</h3>
+                <!-- محتوای فیلتر برند -->
+            </div>
+
+            <div class="shop-filter-section shop-switch-control">
+                <label class="shop-toggle-switch">
+                    <input type="checkbox">
+                    <span class="shop-toggle-slider"></span>
+                </label>
+                <span>ارسال سریع</span>
+            </div>
+
+            <div class="shop-filter-section shop-switch-control">
+                <label class="shop-toggle-switch">
+                    <input type="checkbox">
+                    <span class="shop-toggle-slider"></span>
+                </label>
+                <span>ارسال فروشنده</span>
+            </div>
+
+            <div class="shop-filter-section">
+                <h3>محدوده قیمت</h3>
+                <!-- محتوای فیلتر قیمت -->
+            </div>
+        </div>
+
+        <!-- پنل جدید فیلتر فروشندگان -->
+        <div class="shop-filter-panel-section" style="margin-top: 20px;">
+            <h2>فروشندگان</h2>
+            <div class="shop-filter-section">
+                <ul class="accordion-menu">
+                    <li class="shop-nav-dropdown">
+                        <a href="#" class="accordion-toggle">
+                            فروشنده های این محصول
+                            <span class="accordion-arrow"></span>
+                        </a>
+                        <ul class="shop-nav-submenu">
+                            <li>
+                                @foreach (var item in Model.FillStores)
+                                {
+                                    <a href="#">@item.Name</a>
+                                }
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</div> *@

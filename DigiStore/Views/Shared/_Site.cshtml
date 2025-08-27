@@ -1,0 +1,1047 @@
+﻿<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" type="image/png" href="~/Images/Site/ADQ.png" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Title</title>
+
+    <!-- CSS Global (همه صفحات) -->
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/css/app.css">
+    <link rel="stylesheet" href="~/css/font.css" /> <!-- تکرار حذف شد -->
+    <link rel="stylesheet" href="~/css/panel/font-awesome.css" />
+    <link href="~/css/all.min.css" rel="stylesheet" />
+    <link href="~/css/menu.css" rel="stylesheet" />
+    <link href="~/css/modal.css" rel="stylesheet" />
+    <link href="~/css/categorysearch.css" rel="stylesheet" />
+    <!-- CSS اختصاصی برای بخش‌های دیگر را می‌توانید با RenderSectionAsync اضافه کنید -->
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body class="bg-light dark:bg-zinc-900 text-text-primary-light dark:text-text-primary-dark transition-colors duration-200">
+
+    <!-- ================= start header ================= -->
+    <header id="topHeader" class="sticky top-0 right-0 left-0 z-20 bg-white shadow-md dark:bg-zinc-900">
+        <!-- نوار بالایی: لوگو، جستجو، آیکون‌ها -->
+        <div class="container mx-auto px-4">
+            <div class="grid place-items-center gap-3 grid-cols-12 py-3">
+                <!-- دکمه منوی موبایل -->
+                <div class="lg:hidden col-span-2 w-full">
+                    <a href="javascript:void(0)" id="mobile-menu-trigger" class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- لوگو -->
+                <div class="lg:col-span-2 lg:order-1 order-2 col-span-6 w-full">
+                    <a href="~/">
+                        <div class="lg:text-start text-center">
+                            <img class="md:h-12 h-10 mx-auto lg:mx-0" src="~/Images/Site/Logo.png" loading="lazy" alt="دیجی استور">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- جستجو و فیلتر (فقط دسکتاپ) -->
+                <div class="lg:col-span-6 lg:block lg:order-2 order-4 hidden col-span-4 w-full">
+                    <div class="flex items-center">
+                        <!-- search -->
+                        <div class="relative flex items-center w-full">
+                            <input type="search" class="w-full appearance-none dark:text-white rounded-3xl  border border-gray-300 py-3 pr-18 px-3 dark:placeholder-gray-400 dark:bg-zinc-800" placeholder="جستجوی محصولات ....">
+                            <button class="bg-primary-grad  p-2 text-white rounded-3xl absolute right-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- filter -->
+                        <div data-modal-target="filterModal" class="modal-trigger border px-2 py-1 ms-3 cursor-pointer rounded-lg border-gray-300 flex items-center dark:border-zinc-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path>
+                            </svg>
+                            <div class="ms-2 text-center">
+                                <p class="text-xs text-nowrap dark:text-white">انتخاب مکان</p>
+                                <span class="text-primary text-xs text-nowrap"> فیلتر شهر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ناحیه کاربری (ورود، سبد خرید و...) -->
+                <div class="lg:col-span-4 col-span-4 order-3 w-full">
+                    <div class="flex items-center justify-end">
+                        <div class="flex items-center md:gap-x-5 gap-x-3">
+
+                            <div class="flex items-baseline md:me-5 me-2">
+                                <!-- call -->
+                                <a href="#" class="lg:block hidden">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"></path>
+                                    </svg>
+                                </a>
+                                <!-- basket -->
+                                <div onclick="toggleOffcanvas('offcanvas-left')" class="relative md:ms-5 ms-2 flex cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 dark:text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"></path>
+                                    </svg>
+                                    <span class="size-5 text-sm -top-3 -end-2 absolute bg-primary-grad dark:bg-white text-white rounded-lg text-center">2</span>
+                                </div>
+                                <!-- dark mode -->
+                                <div class="md:ms-5 ms-2">
+                                    <button id="dark-mode-toggle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:size-8 size-6 dark:block hidden dark:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:size-8 size-6 dark:hidden block dark:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- جداکننده عمودی -->
+                            <div class="hidden lg:inline-block h-8 w-px self-stretch bg-gray-200 dark:bg-zinc-700"></div>
+
+                            <div x-data="{ open: false }" class="relative inline-block text-left" x-on:keydown.escape.window="open = false">
+                                <!-- دکمه ناحیه کاربری -->
+                                <button type="button"
+                                        x-on:click="open = !open"
+                                        class="bg-white dark:bg-zinc-900 dark:text-white text-dark flex items-center lg:py-2 lg:px-3 lg:border lg:border-gray-400 rounded-lg dark:border-zinc-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                         stroke="currentColor" class="lg:size-6 lg:ml-2 size-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+                                    <span class="lg:inline-block hidden">ناحیه کاربری</span>
+                                </button>
+
+                                <!-- منو -->
+                                <div x-cloak
+                                     x-show="open"
+                                     x-transition
+                                     x-on:click.outside="open = false"
+                                     class="absolute left-0 mt-2 w-max min-w-[12rem] rounded-lg shadow-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 z-50 whitespace-nowrap">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 text-center">
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <li>
+                                                <a href="~/Accounts/login" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg">
+                                                    <span class="fa-regular fa-user"></span>
+                                                    پروفایل
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="~/Accounts/Logout" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg">
+                                                    <span class="fa-regular fa-sign-out"></span> <!-- آیکون خروج -->
+                                                    خروج از حساب
+                                                </a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li>
+                                                <a href="~/Accounts/login" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg">
+                                                    <span class="fa-regular fa-key"></span>
+                                                    ورود به حساب کاربری
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="~/Accounts/Register" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg">
+                                                    <span class="fa-regular fa-user"></span>
+                                                    عضویت در سایت
+                                                </a>
+                                            </li>
+                                        }
+                                        <li>
+                                            <a href="~/Accounts/Store" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg">
+                                                <span class="fa-regular fa-shopping-bag"></span>
+                                                میخواهم فروشنده بشوم
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نوار پایینی: منوی دسته‌بندی‌ها (فقط دسکتاپ) - ساختار یکپارچه -->
+        <nav class="container mx-auto hidden lg:flex items-center h-[56px] border-t border-gray-200 dark:border-zinc-700">
+
+            <!-- آیتم اول: منوی دسته‌بندی‌ها -->
+            <div class="category-menu-container h-full nav-item">
+                <a class="category-trigger-link">
+                    <!-- آیکون SVG یا Font Awesome می‌تواند اینجا باشد -->
+                    دسته بندی کالاها
+                </a>
+                <!-- این div یک Placeholder است که جاوااسکریپت محتوای Mega Menu را در حالت دسکتاپ به اینجا منتقل می‌کند -->
+                <div id="desktop-menu-container" class="relative"></div>
+            </div>
+
+            <!-- آیتم‌های بعدی: سایر منوها -->
+            <a href="#" class="other-menu nav-item">
+                <i class="fa-regular fa-fire-flame-curved ml-2"></i>
+                فروش ویژه
+            </a>
+            <a href="#" class="other-menu nav-item">
+                <i class="fa-regular fa-percent ml-2"></i>
+                تخفیف‌ها و پیشنهادها
+            </a>
+            <a href="#" class="other-menu nav-item">
+                <i class="fa-regular fa-gem ml-2"></i>
+                پرفروش‌ترین‌ها
+            </a>
+            <a href="#" onclick="BannerModal()" class="other-menu nav-item" data-toggle="modal" data-target="#LargeModel" data-title="تعرفه تبلیغات">
+                <i class="fa-regular fa-rectangle-ad ml-2"></i>
+                تعرفه تبلیغات
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- ساختار مگا منو (برای مدیریت بهتر، ابتدا اینجا رندر می‌شود و سپس توسط JS جابجا می‌شود) -->
+    <!-- MenuComponent باید یک div با ID "mega-menu-content" رندر کند -->
+    <div id="mega-menu-wrapper" class="absolute hidden">
+        @await Component.InvokeAsync("MenuComponent")
+    </div>
+    <div class="mobile-menu-overlay"></div>
+    <!-- ================= end header ================= -->
+    @RenderBody()
+
+    <!-- ================= start footer section ================= -->
+    <section class="py-5 dark:text-white dark:bg-zinc-900 bg-white drop-shadow-md border-t border-gray-200 dark:border-zinc-700" itemscope="" itemtype="http://schema.org/WPFooter">
+        <div class="container mx-auto px-4">
+            <!-- Logo and Back to Top -->
+            <div class="grid gap-4 grid-cols-4 place-items-center" itemscope="" itemtype="http://schema.org/Organization">
+                <div class="sm:col-span-3 col-span-2 w-full">
+                    <a href="~/" itemprop="url">
+                        <figure itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+                            <img src="~/Images/Site/logo.png" class="h-12" alt="لوگوی فروشگاه دیجی استور" itemprop="contentUrl">
+                            <meta itemprop="caption" content="لوگوی رسمی فروشگاه دیجی استور">
+                        </figure>
+                    </a>
+                </div>
+                <div class="sm:col-span-1 col-span-2 w-full">
+                    <div class="text-left">
+                        <a href="#topHeader" class="inline-flex border px-4 py-1.5 item-center justify-between rounded-lg dark:border-zinc-700" aria-label="بازگشت به بالای صفحه">
+                            <span>بازگشت بالا</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 ms-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Information -->
+            <div class="flex my-10 items-start flex-wrap space-y-4 space-x-4 divide-x-2  sm:divide-neutral-600 divide-transparent" itemscope="" itemtype="http://schema.org/ContactPoint">
+                <div class="space-x-3 pl-2" itemprop="contactOption" itemscope="" itemtype="http://schema.org/ContactPoint">
+                    <span class="inline-block">شماره تماس:</span>
+                    <span class="inline-block" itemprop="telephone">021-12345678</span>
+                </div>
+                <div class="space-x-3 pl-2" itemprop="contactOption" itemscope="" itemtype="http://schema.org/ContactPoint">
+                    <span class="inline-block">آدرس ایمیل:</span>
+                    <a href="mailto:site@gmail.com" class="inline-block" itemprop="email">site@gmail.com</a>
+                </div>
+                <div class="space-x-3 pl-2">
+                    <meta itemprop="hoursAvailable" content="Mo-Su,00:00-23:59">
+                    <span class="inline-block">هفت روز هفته ، 24 ساعت شبانه‌روز پاسخگوی شما هستیم.</span>
+                </div>
+            </div>
+            <!-- Menu Columns -->
+            <div class="grid gap-4 grid-cols-4 place-items-start">
+                <div class="lg:col-span-1 sm:col-span-2 col-span-4 w-full">
+                    <h4 class="font-bold text-lg mb-5" aria-label="راهنمای خرید">راهنمای خرید</h4>
+                    <ul class="space-y-4 mt-1" role="menu">
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">نحوه ثبت سفارش</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">رویه ارسال سفارش</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">شیوه های پرداخت</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">رویه های بازگرداندن کالا</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1 sm:col-span-2 col-span-4 w-full">
+                    <h4 class="font-bold text-lg mb-5" aria-label="سیاست‌های فروشگاه">فروشگاه</h4>
+                    <ul class="space-y-4 mt-1" role="menu">
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">حریم خصوصی</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">شرایط استفاده</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">رویه های بازگرداندن کالا</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">پاسخ به پرسش های متداول</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1 sm:col-span-2 col-span-4 w-full">
+                    <h4 class="font-bold text-lg mb-5" aria-label="درباره ما">درباره ما</h4>
+                    <ul class="space-y-4 mt-1" role="menu">
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">اتاق خبر</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">فروش در فروشگاه ما</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">فرصت های شغلی</a></li>
+                        <li role="menuitem"><a href="#" itemprop="significantLink" class="hover:text-primary transition-colors">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1 sm:col-span-2 col-span-4 w-full">
+                    <h4 class="font-bold text-lg my-5" aria-label="شبکه‌های اجتماعی">رسانه های خبری ما</h4>
+                    <ul class="flex items-center space-x-4" role="list">
+                        <li role="listitem"><a href="#" itemprop="sameAs"><img src="~/Images/Test/rubika.png" alt="ربیکا" class="size-7"></a></li>
+                        <li role="listitem"><a href="#" itemprop="sameAs"><img src="~/Images/Test/aparat.png" alt="آپارات" class="size-7"></a></li>
+                        <li role="listitem"><a href="#" itemprop="sameAs"><img src="~/Images/Test/bale.png" alt="بله" class="size-7"></a></li>
+                        <li role="listitem"><a href="#" itemprop="sameAs"><img src="~/Images/Test/eitta.png" alt="ایتا" class="size-7"></a></li>
+                        <li role="listitem"><a href="#" itemprop="sameAs"><img src="~/Images/Test/igap.png" alt="ایگپ" class="size-7"></a></li>
+                        <li role="listitem"><a href="#" itemprop="sameAs"><img src="~/Images/Test/sorush.png" alt="سروش" class="size-7"></a></li>
+                    </ul>
+                    <h4 class="font-bold text-lg my-5" aria-label="عضویت در خبرنامه">عضویت در خبرنامه</h4>
+                    <form action="#" method="POST" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SubscribeAction">
+                        <meta itemprop="target" content="/newsletter-subscribe">
+                        <div class="flex items-center">
+                            <input type="tel" name="mobile" inputmode="numeric" pattern="[0-9]*" class="w-full dark:bg-zinc-700 focus:ring-primary direction outline-0 focus:border-primary border-2 border-transparent rounded-xl bg-gray-200 border-gray-300 py-4 px-3 dir-rtl" placeholder="شماره موبایل خود را وارد کنید" itemprop="query-input">
+                            <button type="submit" class="bg-primary-grad mr-2 py-4 px-6 text-white rounded-xl" aria-label="ثبت شماره موبایل">ثبت</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Application Download -->
+            <div class="grid gap-4 bg-primary-grad no-hover px-4 py-5 rounded-xl mt-5 grid-cols-4 place-items-center">
+                <div class="lg:col-span-1 col-span-4 w-full">
+                    <h4 class="font-bold text-xl text-white">دانلود اپلیکیشن فروشگاهی دیجی استور</h4>
+                </div>
+                <div class="lg:col-span-3 col-span-4 w-full">
+                    <ul class="flex items-center justify-end space-x-3">
+                        <li>
+                            <a href="#" itemprop="downloadUrl" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+                                <meta itemprop="applicationCategory" content="BusinessApplication">
+                                <img src="~/Images/Test/google-play-app.svg" alt="دانلود از گوگل پلی" class="h-12">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" itemprop="downloadUrl" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+                                <meta itemprop="operatingSystem" content="Android">
+                                <img src="~/Images/Test/app-sibapp.svg" alt="دانلود از سیب‌اپ" class="h-12">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" itemprop="downloadUrl" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+                                <meta itemprop="operatingSystem" content="Android">
+                                <img src="~/Images/Test/bazar-app.svg" alt="دانلود از بازار" class="h-12">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Description & Trust Seals -->
+            <div class="grid gap-4 grid-cols-4 mt-10">
+                <div class="lg:col-span-3 col-span-4" itemprop="description">
+                    <h5 class="font-bold mb-5">فروشگاه اینترنتی دیجی استور، بررسی، انتخاب و خرید آنلاین</h5>
+                    <p class="text-neutral-600 dark:text-gray-300 leading-9">
+                        دیجی استور به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، ۷ روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه اینترنتی ایران تبدیل شود.
+                    </p>
+                </div>
+                <div class="lg:col-span-1 col-span-4">
+                    <ul class="flex lg:justify-end justify-center items-center space-x-4">
+                        <li class="border border-gray-300 p-3 rounded-xl dark:border-zinc-700">
+                            <a href="#" itemscope="" itemtype="https://schema.org/ImageObject">
+                                <img src="~/Images/Test/namad-01.png" class="h-25" alt="نماد اعتماد الکترونیک" itemprop="contentUrl">
+                                <meta itemprop="caption" content="نماد رسمی اعتماد الکترونیک">
+                            </a>
+                        </li>
+                        <li class="border border-gray-300 p-3 rounded-xl dark:border-zinc-700">
+                            <a href="#" itemscope="" itemtype="https://schema.org/ImageObject">
+                                <img src="~/Images/Test/enamad.png" class="h-25" alt="اینماد" itemprop="contentUrl">
+                                <meta itemprop="license" content="https://enamad.ir">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="grid gap-4 grid-cols-4 mt-10">
+                <div class="lg:col-span-3 col-span-4">
+                    <p class="text-neutral-500 dark:text-gray-400 leading-9" itemprop="copyrightNotice">
+                        استفاده از مطالب فروشگاه اینترنتی دیجی استور فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است.
+                        <span itemprop="copyrightYear">2006-2024</span> کلیه حقوق این سایت متعلق به
+                        <span itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Organization">
+                            <span itemprop="name">دیجی استور</span>
+                        </span> می‌باشد.
+                    </p>
+                </div>
+                <div class="lg:col-span-1 col-span-4">
+                    <p class="text-neutral-500 dark:text-gray-400 sm:text-end text-center leading-9">
+                        طراحی و توسعه توسط
+                        <a href="#" itemprop="author" class="hover:text-primary transition-colors">علیرضا محمدی</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= end footer section ================= -->
+    <!-- ================= start cart offcanvas ================= -->
+    <!-- Offcanvas Cart -->
+    <div id="offcanvas-left" class="offcanvas invisible dark:bg-zinc-900 dark:text-white fixed top-0 left-0 sm:w-100 w-[80%] h-full bg-white shadow-lg transform -translate-x-full transition-transform opacity-0 z-50" role="dialog" aria-labelledby="cart-title" aria-modal="true">
+        <!-- Header -->
+        <header class="border-b p-3 flex items-center justify-between border-gray-400 dark:border-zinc-700">
+            <h2 id="cart-title" class="font-bold text-base">سبد خرید شما</h2>
+            <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن سبد خرید">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </header>
+        <!-- Cart Items -->
+        <main class="relative space-y-4 divide-y divide-gray-200 dark:divide-zinc-700 p-3 overflow-y-scroll h-full">
+            <!-- Product 1 -->
+            <div class="py-3 last:mb-35" itemscope="" itemtype="http://schema.org/Product">
+                <div class="flex flex-wrap items-center">
+                    <div class="text-right w-1/3">
+                        <img class="max-w-full" src="~/Images/Test/wach-1.png" alt="ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve" itemprop="image" loading="lazy">
+                    </div>
+                    <div class="w-2/3 space-y-4">
+                        <h3 class="font-bold leading-7" itemprop="name">
+                            ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve
+                        </h3>
+                        <div class="flex items-center justify-between">
+                            <del class="text-rose-600 dark:text-gray-400 line-through" itemprop="priceCurrency" content="IRR">
+                                <span itemprop="highPrice">5,000,000</span>
+                            </del>
+                            <ins class="no-underline text-xl text-green-600 font-bold" itemprop="price" content="2500000">
+                                2,500,000 <span class="text-sm font-normal text-gray-700 dark:text-white">تومان</span>
+                            </ins>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <span itemprop="quantity">تعداد: 3</span>
+                            <a href="#" class="bg-red-100 dark:border dark:bg-transparent dark:text-white text-red-950 p-2 rounded-lg dark:border-zinc-700" role="button" aria-label="حذف محصول از سبد خرید">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="p-2 absolute bottom-0 right-0 left-0 bg-white dark:border-0  dark:bg-zinc-900 border border-gray-400 dark:border-zinc-700">
+            <div class="flex items-center justify-between">
+                <div class="space-y-2">
+                    <span class="inline-block text-lg">جمع کل</span>
+                    <h3 class="font-bold text-xl" itemprop="totalPrice" content="11000000">
+                        11,000,000 تومان
+                    </h3>
+                </div>
+                <div class="text-end">
+                    <a href="#" class="bg-primary-grad hover:bg-primary-600 text-white py-2 px-4 rounded-lg" role="button" aria-label="تکمیل فرایند خرید">
+                        تکمیل خرید
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay transition fixed inset-0 z-40 bg-black/70 hidden" onclick="closeOffcanvas()" role="presentation" aria-hidden="true"></div>
+    <!-- ================= end cart offcanvas ================= -->
+    <!-- ================= start filter modal ================= -->
+    <div id="filterModal" role="dialog" aria-modal="true" aria-labelledby="filterModalTitle" data-modal-id="filterModal" class="modal hidden fixed inset-0 z-50 overflow-auto backdrop-blur bg-opacity-50">
+        <div class="relative p-4 w-full max-w-md m-auto flex items-center min-h-screen">
+            <div class="relative dark:bg-zinc-900 border-gray-300 border bg-white rounded-lg shadow-lg w-full dark:border-zinc-700" itemscope="" itemtype="http://schema.org/Place">
+                <!-- Header -->
+                <div class="flex justify-between items-center p-4 dark:border-b-zinc-700 border-b">
+                    <h3 id="filterModalTitle" class="text-xl  dark:text-white" itemprop="name">فیلتر بر اساس شهر</h3>
+                    <button data-modal-close="" class="text-gray-500 hover:text-gray-700 cursor-pointer text-3xl" aria-label="بستن پنجره فیلتر">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Content -->
+                <div class="p-4">
+                    <!-- Cities Data -->
+                    <meta itemprop="address" content="تهران,مشهد,اصفهان,تبریز,شیراز,اهواز,قم,کرج,کرمانشاه,ارومیه,زاهدان,رشت,همدان,یزد,اردبیل,بندرعباس,کیش,ساری,گرگان,بجنورد">
+                    <div id="citySelector" data-cities="تهران,مشهد,اصفهان,تبریز,شیراز,اهواز,قم,کرج,کرمانشاه,ارومیه,زاهدان,رشت,همدان,یزد,اردبیل,بندرعباس,کیش,ساری,گرگان,بجنورد"></div>
+                    <!-- Search Form -->
+                    <form id="searchForm" class="mb-2" role="search">
+                        <label for="search" class="mb-2 block text-sm font-medium dark:text-white text-gray-900">
+                            جستجوی شهر
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                                </svg>
+                            </div>
+                            <input type="search" id="search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary dark:bg-zinc-800 dark:text-white dark:border-zinc-700" placeholder="نام شهر را وارد کنید" aria-describedby="searchDescription" required="">
+                        </div>
+                        <p id="searchDescription" class="sr-only">برای جستجو در بین شهرهای موجود تایپ کنید</p>
+                    </form>
+                    <!-- Selected Cities -->
+                    <div id="selectedCities" class="flex my-3 flex-wrap gap-2" role="status" aria-live="polite"></div>
+                    <!-- Cities List -->
+                    <ul id="cityList" class="w-full h-80 overflow-y-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:text-white" role="listbox" aria-labelledby="filterModalTitle">
+                        <!-- City list items will be generated here by JS from data-cities attribute or kept as is -->
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-تهران" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-تهران" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    تهران
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-مشهد" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-مشهد" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    مشهد
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-اصفهان" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-اصفهان" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    اصفهان
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-تبریز" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-تبریز" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    تبریز
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-شیراز" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-شیراز" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    شیراز
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-اهواز" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-اهواز" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    اهواز
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-قم" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-قم" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    قم
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-کرج" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-کرج" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    کرج
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-کرمانشاه" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-کرمانشاه" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    کرمانشاه
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-ارومیه" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-ارومیه" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    ارومیه
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-زاهدان" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-زاهدان" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    زاهدان
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-رشت" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-رشت" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    رشت
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-همدان" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-همدان" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    همدان
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-یزد" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-یزد" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    یزد
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-اردبیل" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-اردبیل" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    اردبیل
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-بندرعباس" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-بندرعباس" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    بندرعباس
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-کیش" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-کیش" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    کیش
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-ساری" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-ساری" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    ساری
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-گرگان" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-گرگان" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    گرگان
+                                </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-zinc-700">
+                            <div class="flex items-center ps-3">
+                                <input id="city-بجنورد" type="checkbox" class="city-checkbox w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary dark:focus:ring-primary dark:bg-gray-700 dark:border-gray-600">
+                                <label for="city-بجنورد" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    بجنورد
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Filter Button -->
+                    <div class="mt-4">
+                        <button id="filterButton" class="w-full px-4 py-3 cursor-pointer bg-primary text-white rounded-lg hover:bg-primary-600 transition-colors" aria-label="اعمال فیلتر بر اساس شهرهای انتخاب شده">
+                            فیلتر کن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= end filter modal ================= -->
+    <!-- ================= start responsive menu offcanvas ================= -->
+    <div id="offcanvas-right" class="offcanvas invisible overflow-y-scroll fixed top-0 right-0 sm:w-100 w-[80%] h-full bg-white dark:bg-zinc-900 shadow-lg transform -translate-x-full transition-transform opacity-0 z-50" role="navigation" aria-labelledby="store-menu-title" aria-modal="true">
+        <div class="border-b p-3 flex items-center justify-between border-gray-400 dark:border-zinc-700">
+            <h2 id="store-menu-title" class="font-bold text-base dark:text-white">فروشگاه دیجی استور</h2>
+            <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن منوی فروشگاه">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="relative space-y-4 divide-y divide-gray-200 dark:divide-zinc-700 p-3 overflow-y-scroll h-full" style="padding-left: 0!important;" aria-label="منوی اصلی">
+            <ul class="space-y-2 text-sm">
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#" class="block" itemprop="url">صفحه اصلی</a>
+                </li>
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                    <button class="flex justify-between w-full text-right" aria-expanded="false" aria-controls="menu1" id="menu1-button" onclick="toggleDropdown(&#39;menu1&#39;)">
+                        <span itemprop="name">گوشی موبایل</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform dark:text-white" id="icon-menu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <ul id="menu1" class="hidden bg-gray-200 dark:bg-zinc-900 dark:text-white" role="menu" aria-labelledby="menu1-button">
+                        <li class="border-b border-gray-300 dark:border-zinc-700" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                            <button class="flex justify-between w-full px-6 py-2 text-right" aria-expanded="false" aria-controls="submenu1" id="submenu1-button" onclick="toggleDropdown(&#39;submenu1&#39;)">
+                                <span itemprop="name">برند</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform dark:text-white" id="icon-submenu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="submenu1" class="hidden bg-gray-100 dark:bg-zinc-800 dark:text-gray-200" role="menu" aria-labelledby="submenu1-button" itemscope="" itemtype="http://schema.org/Brand">
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">سامسونگ</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">اپل</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">شیائومی</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">هواوی</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">نوکیا</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">ال جی</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">سونی</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">گوگل</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">وان پلاس</li>
+                                <li class="px-8 py-2 border-b border-gray-200 dark:border-zinc-700" itemprop="name">موتورولا</li>
+                            </ul>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200 dark:border-zinc-700" itemscope="" itemtype="http://schema.org/ProductCategory">
+                            <a href="#" class="block" itemprop="name">پرچمدار</a>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200 dark:border-zinc-700" itemscope="" itemtype="http://schema.org/ProductCategory">
+                            <a href="#" class="block" itemprop="name">میان رده</a>
+                        </li>
+                        <li class="px-6 py-2 border-b border-gray-200 dark:border-zinc-700" itemscope="" itemtype="http://schema.org/ProductCategory">
+                            <a href="#" class="block" itemprop="name">اقتصادی</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-ul-f7 border border-gray-100 dark:bg-zinc-800 dark:text-white p-2" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#" class="block" itemprop="url">صفحات</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay z-40 transition fixed inset-0 bg-black/70 hidden" onclick="closeOffcanvas()" role="presentation" aria-hidden="true"></div>
+    <!-- ================= end responsive menu offcanvas ================= -->
+    <!-- ================= start nav mobile menu ================= -->
+    <nav class="fixed shadow-xl border-t-zinc-300 dark:border-0 bottom-0 z-20 lg:hidden left-0 right-0 dark:bg-zinc-900 dark:text-white bg-white border-t border-gray-200">
+        <div class="flex justify-around items-center flex-row-reverse py-3 px-4">
+            <!-- Home -->
+            <a href="~/" class="flex flex-col items-center text-primary space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-primary">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+                </svg>
+                <span class="text-xs font-bold">خانه</span>
+            </a>
+            <!-- cart -->
+            <a href="javascript:void(0)" onclick="toggleOffcanvas('offcanvas-left')" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"></path>
+                </svg>
+                <span class="text-xs dark:text-white">سبد خرید</span>
+            </a>
+            <!-- Profile -->
+            <a href="~/Accounts/login" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
+                </svg>
+                <span class="text-xs dark:text-white">پنل کاربری</span>
+            </a>
+            <!-- Top -->
+            <a href="#topHeader" class="flex flex-col items-center text-gray-500 hover:text-gray-700 space-y-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"></path>
+                </svg>
+                <span class="text-xs dark:text-white">رفتن به بالا</span>
+            </a>
+        </div>
+    </nav>
+    <!-- ================= end nav mobile menu ================= -->
+    <!-- ================= Bootstrap Modal (if you insist on using it, otherwise remove) ================= -->
+    <div id="LargeModel" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="LargeModelTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content modern-modal dark:bg-zinc-800 dark:text-white">
+                <div class="modal-header dark:border-zinc-700">
+                    <h4 class="modal-title" id="LargeModelTitle">عنوان مودال</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="dark:text-white">&times;</span>
+                    </button>
+                </div>
+                <div id="LargeModelBody" class="modal-body">
+                    <!-- محتوا از AJAX میاد -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* این استایل‌ها به دلیل تداخل z-index با Tailwind/پلاگین‌های دیگر اضافه شده‌اند. */
+        /* در صورت حذف Bootstrap، این استایل‌ها را نیز حذف کنید. */
+        .modal-backdrop {
+            z-index: 1040 !important;
+            position: fixed; /* اضافه شد برای اطمینان از موقعیت صحیح */
+        }
+
+        .modal {
+            z-index: 1055 !important;
+        }
+    </style>
+    <!-- ================= End Bootstrap Modal ================= -->
+    <!-- ================= Global Scripts (همه صفحات) ================= -->
+    <script src="~/js/jquery-3.7.1.min.js"></script> <!-- تنها یک بار لود شود -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> <!-- defer برای بارگذاری غیرهمزمان -->
+    <script src="~/JS/story-player.js"></script>
+    <script src="~/JS/swiper-bundle.min.js"></script>
+    <script src="~/JS/swiper-script.js"></script>
+    <script src="~/JS/persiannumber.js"></script>
+    <script src="~/JS/app.js"></script> <!-- app.js بعد از کتابخانه‌هایی که به آن‌ها وابسته است (مثل jQuery) لود شود -->
+    <script src="~/js/bindforms.js"></script>
+    <!-- اگر از Bootstrap برای LargeModel استفاده می‌کنید، Bootstrap JS باید بعد از jQuery و قبل از فراخوانی توابعش لود شود -->
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+
+    <!-- initial story api -->
+    <script>
+        const stories = [
+            {
+                type: 'image',
+                user: 'استوری ۱',
+                avatar: '~/Images/Story/1.jpg', /* مسیرها اصلاح شد */
+                url: '~/Images/Story/1.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 2',
+                avatar: '~/Images/Story/2.jpg',
+                url: '~/Images/Story/2.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 3',
+                avatar: '~/Images/Story/3.jpg',
+                url: '~/Images/Story/3.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 4',
+                avatar: '~/Images/Story/5.jpg',
+                url: '~/Images/Story/5.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 5',
+                avatar: '~/Images/Story/6.jpg',
+                url: '~/Images/Story/6.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 6',
+                avatar: '~/Images/Story/7.jpg',
+                url: '~/Images/Story/7.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 7',
+                avatar: '~/Images/Story/8.jpg',
+                url: '~/Images/Story/8.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'video',
+                user: 'استوری 8',
+                avatar: '~/Images/Story/4.jpg',
+                url: '~/Images/Story/video/1.mp4',
+                duration: null,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری ۱',
+                avatar: '~/Images/Story/1.jpg',
+                url: '~/Images/Story/1.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 2',
+                avatar: '~/Images/Story/2.jpg',
+                url: '~/Images/Story/2.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 3',
+                avatar: '~/Images/Story/3.jpg',
+                url: '~/Images/Story/3.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 4',
+                avatar: '~/Images/Story/5.jpg',
+                url: '~/Images/Story/5.jpg',
+                duration: 5000,
+                link: '#'
+            },
+            {
+                type: 'image',
+                user: 'استوری 5',
+                avatar: '~/Images/Story/6.jpg',
+                url: '~/Images/Story/6.jpg',
+                duration: 5000,
+                link: '#'
+            },
+        ];
+
+        // اطمینان حاصل کنید که مسیرها به درستی نگاشت شده‌اند. اگر تصاویر در پوشه `wwwroot/Images/Story` هستند، مسیر درست است.
+        new StoryPlayer('stories-container', stories);
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- عناصر DOM ---
+            const mobileMenuTrigger = document.getElementById('mobile-menu-trigger');
+            const megaMenuWrapper = document.getElementById('mega-menu-wrapper');
+            let megaMenuContent = document.getElementById('mega-menu-content'); // فرض می‌کنیم MenuComponent این ID را رندر می‌کند
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const desktopMenuContainer = document.getElementById('desktop-menu-container'); // اضافه شد
+
+            if (!megaMenuContent) {
+                console.error("Mega Menu Content (ID: mega-menu-content) not found. Ensure MenuComponent renders it.");
+                return; // اگر منو رندر نشده، ادامه نده
+            }
+
+            // تابع برای جابجایی DOM منو بر اساس سایز صفحه
+            function setupMenuLocation() {
+                if (window.innerWidth > 1024) { // دسکتاپ
+                    // مطمئن می‌شویم که منو در مکان دسکتاپ (داخل desktop-menu-container) است
+                    if (desktopMenuContainer && !desktopMenuContainer.contains(megaMenuContent)) {
+                        desktopMenuContainer.appendChild(megaMenuContent);
+                        megaMenuContent.classList.remove('active'); // اطمینان از بسته بودن در دسکتاپ
+                        overlay.style.display = 'none'; // اطمینان از مخفی بودن overlay
+                        document.body.style.overflow = ''; // رفع قفل اسکرول
+                    }
+                } else { // موبایل
+                    // مطمئن می‌شویم که منو در مکان موبایل (داخل mega-menu-wrapper) است
+                    if (megaMenuWrapper && !megaMenuWrapper.contains(megaMenuContent)) {
+                        megaMenuWrapper.appendChild(megaMenuContent);
+                    }
+                }
+            }
+
+            function initializeMenuEvents() {
+                // اگر قبلا رویدادها متصل شده‌اند، از اتصال مجدد خودداری کنید
+                // یا از removeEventListener قبل از addEventListener استفاده کنید
+                // برای سادگی اینجا فرض می‌کنیم یک بار فراخوانی می‌شود
+                const closeBtn = megaMenuContent.querySelector('.close-menu-btn');
+                const submenuToggles = megaMenuContent.querySelectorAll('.main-categories .has-submenu > a');
+
+                // باز کردن منوی موبایل (با استفاده از offcanvas-right)
+                // این بخش اکنون offcanvas-right را باز می‌کند نه megaMenuContent را مستقیما
+                mobileMenuTrigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // اگر megaMenuContent را برای موبایل استفاده می‌کنید:
+                    // megaMenuContent.classList.add('active');
+                    // overlay.style.display = 'block';
+                    // document.body.style.overflow = 'hidden';
+
+                    // اگر از offcanvas-right برای منوی موبایل جداگانه استفاده می‌کنید:
+                    toggleOffcanvas('offcanvas-right'); // فراخوانی تابع موجود برای offcanvas
+                });
+
+                // بستن منوی موبایل
+                function closeMenu() {
+                    // اگر megaMenuContent را برای موبایل استفاده می‌کنید:
+                    // megaMenuContent.classList.remove('active');
+                    // overlay.style.display = 'none';
+                    // document.body.style.overflow = '';
+
+                    // اگر از offcanvas-right برای منوی موبایل جداگانه استفاده می‌کنید:
+                    closeOffcanvas(); // فراخوانی تابع موجود برای offcanvas
+                }
+
+                if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+                if (overlay) overlay.addEventListener('click', closeMenu);
+
+                // باز و بسته کردن زیرمنوها (آکاردئون) در موبایل
+                submenuToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function (event) {
+                        if (window.innerWidth <= 1024) { // فقط در حالت موبایل/تبلت
+                            event.preventDefault();
+                            const parentLi = this.parentElement;
+                            const subPanel = parentLi.querySelector('.sub-category-panel');
+
+                            // بستن سایر زیرمنوها قبل از باز کردن جدید
+                            submenuToggles.forEach(otherToggle => {
+                                if (otherToggle !== toggle) {
+                                    const otherParentLi = otherToggle.parentElement;
+                                    const otherSubPanel = otherParentLi.querySelector('.sub-category-panel');
+                                    otherParentLi.classList.remove('open');
+                                    if (otherSubPanel) otherSubPanel.classList.remove('open');
+                                }
+                            });
+
+                            parentLi.classList.toggle('open');
+                            if (subPanel) {
+                                subPanel.classList.toggle('open');
+                            }
+                        }
+                    });
+                });
+            }
+
+            // --- اجرای اولیه و در زمان تغییر سایز پنجره ---
+            setupMenuLocation(); // منو را در جای صحیح قرار بده
+            initializeMenuEvents(); // رویدادها را یک بار متصل کن
+            window.addEventListener('resize', setupMenuLocation); // با تغییر اندازه صفحه دوباره بررسی کن
+        });
+    </script>
+
+    <!-- Script برای مودال BannerModal (با jQuery) -->
+    <script>
+        function BannerModal() {
+            $.ajax({
+                url: "/Home/Banners/",
+                type: "GET",
+                success: function (result) {
+                    $('#LargeModelBody').html(result);
+                    // از توابع Bootstrap modal استفاده کنید
+                    $('#LargeModel').modal({
+                        backdrop: 'static',
+                        keyboard: false,
+                        show: true
+                    });
+
+                    // این تابع احتمالا توابعی برای کار با فرم‌های داخل مودال است
+                    // مطمئن شوید که bindforms.js بعد از jQuery لود شده باشد
+                    if (typeof BindFormLargeModal === 'function') {
+                        BindFormLargeModal();
+                    } else {
+                        console.warn("BindFormLargeModal function not found. Is bindforms.js loaded correctly?");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX Error for BannerModal:", status, error);
+                    // می‌توانید یک پیام خطا به کاربر نمایش دهید
+                    alert("خطا در بارگذاری محتوای تبلیغات.");
+                }
+            });
+        }
+    </script>
+
+
+
+    @await RenderSectionAsync("ScriptManager", required: false)
+</body>
+</html>

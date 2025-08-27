@@ -1,0 +1,123 @@
+﻿@model DigiStore.Core.ViewModels.StoreCouponViewModel
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+    string date = ViewBag.MyDate;
+}
+
+<form asp-action="AddCoupon" id="MyForm" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="ti-pencil"></i>
+                </span>
+            </div>
+            <input asp-for="Name" class="form-control" placeholder="نام کوپن تخفیف" />
+        </div>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="ti-pencil"></i>
+                </span>
+            </div>
+            <input asp-for="Code" class="form-control" placeholder="کد کوپن تخفیف" />
+        </div>
+        <span asp-validation-for="Code" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="ti-pencil"></i>
+                </span>
+            </div>
+            <input asp-for="StartDate" class="form-control" placeholder="شروع از" onclick="PersianDatePicker.Show(this, '@date')" readonly/>
+        </div>
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="ti-pencil"></i>
+                </span>
+            </div>
+            <input asp-for="EndDate" class="form-control" placeholder="پایان در" onclick="PersianDatePicker.Show(this, '@date')" readonly />
+        </div>
+        <span asp-validation-for="EndDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="basic_checkbox_2" name="basic_checkbox_2" onclick="myfunction()" />
+            <label class="form-check-label" for="basic_checkbox_2">
+                درصدی
+            </label>
+        </div>
+    </div>
+    <div class="form-group" id="myPrecent">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="ti-pencil"></i>
+                </span>
+            </div>
+            <input asp-for="Percent" class="form-control" placeholder="درصد تخفیف" id="inputPercent" />
+        </div>
+        <span asp-validation-for="Percent" class="text-danger"></span>
+    </div>
+    <div class="form-group" id="myPrice">
+        <div class="input-group mb-3">
+            <input asp-for="Price" class="form-control" placeholder="مبلغ تخفیف" id="inputPrice" />
+            <div class="input-group-append">
+                <span class="input-group-text">ریال</span>
+            </div>
+        </div>
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="ti-pencil"></i> سایر توضیحات
+                </span>
+            </div>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <input type="submit" value="ذخیره" class="btn btn-success btn-block" />
+        </div>
+    </div>
+</form>
+
+<script>
+    $("#myPrecent").hide();
+    $("#myPrice").show();
+
+    function myfunction() {
+        if (document.getElementById("basic_checkbox_2").checked) {
+            $("#myPrecent").show();
+            $("#myPrice").hide();
+            $("#inputPrice").val("0");
+        } else {
+            $("#myPrecent").hide();
+            $("#myPrice").show();
+            $("#inputPercent").val("0");
+        }
+    }
+</script>

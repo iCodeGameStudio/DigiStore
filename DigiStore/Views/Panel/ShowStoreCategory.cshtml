@@ -1,0 +1,270 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.StoreCategory>
+
+@{
+    ViewData["Title"] = "مدارک فروشگاه";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="page-title">مجوز های فروشگاه</h3>
+            <div class="d-inline-block align-items-center">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">در این قسمت می توانید تمامی سر دسته و زیر دسته ها را مدیریت کنید.</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="row">
+        <div class="col-lg-6 col-6">
+            <!-- دکمه باز کردن -->
+            <button onclick="AddStoreCategoryModal()" class="btn btn-facebook" data-toggle="modal" data-target="#MiniModel" data-title="ارسال مدارک">
+                ارسال مدارک
+            </button>
+        </div>
+        <div class="col-lg-6 col-6">
+            <div class="search-container" id="searchBox">
+                <input type="text" id="searchInput" onkeyup="SearchFunction()" placeholder="جستجو کنید..." />
+                <a class="icon" onclick="toggleSearch()">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-12 col-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h4 class="box-title">لیست مجوز ها</h4>
+                </div>
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <div id="invoice-list_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6"></div>
+                                <div class="col-sm-12 col-md-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="MyDataTable" class="table table-hover no-wrap dataTable no-footer" data-page-size="10" role="grid" aria-describedby="invoice-list_info">
+                                        @if (!Model.Any())
+                                        {
+                                            <tr>
+                                                <td colspan="3">
+                                                    <h5 class="text-center">هیچ موردی برای نمایش وجود ندارد</h5>
+                                                </td>
+                                            </tr>
+                                        }
+                                        else
+                                        {
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#Invoice: activate to sort column descending" style="width: 98.0469px;">@Html.DisplayNameFor(model => model.Date)</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-label="View: activate to sort column ascending" style="width: 69.7969px;">@Html.DisplayNameFor(model => model.Category.Name)</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-label="View: activate to sort column ascending" style="width: 69.7969px;">وضعیت</th>
+                                                    <th tabindex="0" aria-controls="invoice-list" rowspan="1" colspan="1" aria-label="View: activate to sort column ascending" style="width: 69.7969px;">عملیات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                    string color = "";
+                                                    string status = "";
+                                                    if (item.IsActive)
+                                                    {
+                                                        status = "تأیید شده";
+                                                        color = "green";
+                                                    }
+                                                    else
+                                                    {
+                                                        if (item.Description != null)
+                                                        {
+                                                            status = "تأیید نشده";
+                                                            color = "red";
+                                                        }
+                                                        else
+                                                        {
+                                                            color = "orange";
+                                                            status = "در انتظار";
+                                                        }
+                                                    }
+                                                    <tr role="row" class="odd">
+                                                        <td class="sorting_1 persian-numbers">
+                                                            @Html.DisplayFor(modelItem => item.Date)
+                                                        </td>
+                                                        <td class="sorting_1">
+                                                            @Html.DisplayFor(modelItem => item.Category.Name)
+                                                        </td>
+
+                                                        <td style="color:@color">
+                                                            @status
+                                                        </td>
+
+                                                        <td>
+                                                            <a href="#" onclick="DeleteStoreCategoryModal(@item.Id)" class="btn btn-danger btn-sm" data-bs-toggle="tooltip" data-toggle="modal" data-target="#MiniModel" data-title="تأیید حذف">
+                                                                <i class="fa fa-trash fa-lg me-2" aria-hidden="true"></i>
+                                                                حذف
+                                                            </a>
+                                                            <span class="vr mx-2"></span> <!-- خط عمودی -->
+
+                                                            <a href="#" onclick="EditStoreCategoryModal(@item.Id)" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-toggle="modal" data-target="#LargeModel" data-title="ویرایش مدرک">
+                                                                <i class="fa fa-edit fa-lg me-2" aria-hidden="true"></i>
+                                                                ویرایش
+                                                            </a>
+                                                            <span class="vr mx-2"></span> <!-- خط عمودی -->
+                                                            @if (status == "تأیید نشده")
+                                                            {
+                                                                <a href="#" onclick="DetailsStoreCategoryModal(@item.Id)" class="btn btn-info btn-sm" data-bs-toggle="tooltip" data-toggle="modal" data-target="#MiniModel" data-title="علت عدم تأیید">
+                                                                 <i class="fa fa-info fa-lg me-2" aria-hidden="true"></i>
+                                                                    توضیح
+                                                              </a>
+                                                            }
+                                                        </td>
+
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        }
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</section>
+
+
+<div id="LargeModel" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modern-modal">
+            <!-- هدر -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="LargeModelTitle">عنوان مودال</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- بدنه -->
+            <div id="LargeModelBody" class="modal-body">
+                <!-- محتوا از AJAX میاد -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="MiniModel" class="fade modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modern-modal">
+            <!-- هدر -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="MiniModelTitle">عنوان مودال</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div id="MiniModelBody" class="modal-body">
+                <!-- محتوا از AJAX میاد -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .modal-backdrop {
+        z-index: 1040 !important;
+        position: fixed;
+    }
+
+    .modal {
+        z-index: 1055 !important;
+    }
+</style>
+
+
+
+
+@section ScriptManager
+{
+    <script>
+        function AddStoreCategoryModal() {
+            $.ajax({
+                url: "/Panel/AddStoreCategory/",
+                type: "GET",
+                success: function (result) {
+                    $('#MiniModelBody').html(result);
+                    $('#MiniModel').appendTo('body').modal({
+                        backdrop: 'static',
+                        keyboard: false,
+                        show: true
+                    });
+
+                    BindFormMiniModal();
+                }
+            });
+        }
+        function EditStoreCategoryModal(id) {
+            $.ajax({
+                url: "/Panel/EditStoreCategory/" + id,
+                type: "GET",
+                success: function (result) {
+                    $('#LargeModelBody').html(result);
+                    $('#LargeModel').appendTo('body').modal({
+                        backdrop: 'static',
+                        keyboard: false,
+                        show: true
+                    });
+
+                    BindFormLargeModal();
+                }
+            });
+        }
+
+        function DeleteStoreCategoryModal(id) {
+            $.ajax({
+                url: "/Panel/DeleteStoreCategory/" + id,
+                type: "GET",
+                success: function (result) {
+                    $('#MiniModelBody').html(result);
+                    $('#MiniModel').appendTo('body').modal({
+                        backdrop: 'static',
+                        keyboard: false,
+                        show: true
+                    });
+
+                    BindFormMiniModal();
+                }
+            });
+        }
+
+        function DetailsStoreCategoryModal(id) {
+            $.ajax({
+                url: "/Panel/DetailsStoreCategory/" + id,
+                type: "GET",
+                success: function (result) {
+                    $('#MiniModelBody').html(result);
+                    $('#MiniModel').appendTo('body').modal({
+                        backdrop: 'static',
+                        keyboard: false,
+                        show: true
+                    });
+
+                    BindFormMiniModal();
+                }
+            });
+        }
+    </script>
+    <script src="~/js/bindforms.js"></script>
+}

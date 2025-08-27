@@ -1,0 +1,106 @@
+﻿@model DigiStore.Core.ViewModels.StoreBankViewModel
+
+
+@{
+    ViewData["Title"] = "مشخصات حساب مالی";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="page-title">مشخصات حساب مالی شما</h3>
+            <div class="d-inline-block align-items-center">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">لطفا در ثبت مشخصات حساب مالی دقت فرمایید</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<form asp-action="BankCard" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <section class="content">
+        <div class="row">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="box bg-pale-success">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["SuccessTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        @TempData["SuccessMessage"]
+                    </div>
+                </div>
+            }
+
+            @* پیام خطا *@
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="box bg-pale-danger">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["ErrorTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        @TempData["ErrorMessage"]
+                    </div>
+                </div>
+            }
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">مشخصات حساب مالی</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+                    <div class="form">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ti-pencil"></i>شماره شبا بدون IR</span>
+                                    </div>
+                                    <input asp-for="BankCard" class="form-control"/>
+                                </div>
+                                <span asp-validation-for="BankCard" class="text-danger"></span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <input type="submit" value="اعمال تغییرات" class="btn btn-primary btn-block" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">توضیحات</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+                    <div class="form">
+                        <div class="box-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>

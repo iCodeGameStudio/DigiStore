@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.Slider>
+
+<h2 class="sr-only">اسلایدر فروشگاه</h2>
+<div class="w-full overflow-hidden">
+    <div class="swiper max-w-[1920px] mx-auto !relative default-carousel">
+        <div class="swiper-wrapper">
+            @foreach (var item in Model)
+            {
+                <div class="swiper-slide">
+                    <a href="#">
+                        <div class="h-90 flex justify-center items-center">
+                            <img src="~/Images/Sliders/@item.Image"
+                                 class="h-full object-cover w-full rounded-lg"
+                                 loading="lazy"
+                                 alt="@item.Title">
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+
+        <div class="swiper-button-next bg-white rounded-full dark:bg-zinc-800 border border-gray-200 !size-12 after:!text-xl px-3 after:text-primary"></div>
+        <div class="swiper-button-prev bg-white rounded-full dark:bg-zinc-800 border border-gray-200 !size-12 after:!text-xl px-3 after:text-primary"></div>
+        <div class="swiper-pagination !z-30 !bottom-0 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
+        <div class="slider-pagination-bg absolute w-40 h-10 -translate-x-1/2 -mb-3 pt-1 left-1/2 bottom-0 z-10"></div>
+    </div>
+</div>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.default-carousel', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+        });
+    });
+  </script>

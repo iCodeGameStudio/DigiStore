@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.Banner>
+@using DigiStore.Core.Classes
+@inject SiteLayoutScope scope
+
+
+<section class="py-5" aria-label="تبلیغات ویژه" itemscope="" itemtype="https://schema.org/ItemList" id="advertisements">
+    <h2 class="sr-only" itemprop="name">تبلیغات و پیشنهادات ویژه</h2>
+    <div class="container">
+        <div class="grid grid-cols-2 gap-4 place-items-center">
+            @foreach (var item in Model)
+            {
+                <div class="lg:col-span-1 col-span-2" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/Promotion" itemid="#summer-promo">
+                    @if (scope.CheckBanner(item.Id))
+                    {
+
+                        <a href="@scope.GetBanner(item.Id).Url" aria-label="@item.Name" itemprop="url" target="_blank">
+                            <img src="~/Images/Ads/@scope.GetBanner(item.Id).Image" class="rounded-lg transition block duration-300 hover:-translate-y-2" alt="@scope.GetBanner(item.Id).Title" loading="lazy" itemprop="image">
+                            <meta itemprop="@scope.GetBanner(item.Id).Title" content="@scope.GetBanner(item.Id).Title">
+                        </a>
+                    }
+                    else
+                    {
+                        <img src="~/Images/Ads/@item.DefaultImage" class="rounded-lg transition block duration-300 hover:-translate-y-2" alt="@item.Description" loading="lazy" itemprop="image">
+                    }
+
+
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

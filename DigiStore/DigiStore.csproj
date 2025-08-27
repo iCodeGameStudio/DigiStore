@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DigiStore.Core\DigiStore.Core.csproj" />
+		<ProjectReference Include="..\DigiStore.DataAccessLayer\DigiStore.DataAccessLayer.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="wwwroot\Images\Ads\" />
+		<Folder Include="wwwroot\Images\Brands\" />
+		<Folder Include="wwwroot\Images\Galleries\" />
+		<Folder Include="wwwroot\Images\Sliders\" />
+		<Folder Include="wwwroot\Images\Products\" />
+		<Folder Include="wwwroot\Images\Users\Stores\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="KavenegarDotNetCore" Version="1.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.11" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.11">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+		<PackageReference Include="X.PagedList.Mvc.Core" Version="10.5.9" />
+	</ItemGroup>
+
+</Project>

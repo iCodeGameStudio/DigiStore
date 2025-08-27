@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.Category>
+@using DigiStore.Core.Interfaces
+@inject ITemp TempService
+
+
+
+<div class="mega-menu" id="mega-menu-content">
+    <div class="close-menu-btn">&times;</div>
+    <ul class="main-categories">
+        @foreach (var category in Model)
+        {
+            var subCategories = TempService.GetCategoryById(category.Id);
+            bool hasChildren = subCategories.Any();
+
+            <li class="@(hasChildren ? "has-submenu" : "")">
+                <a href="#">
+                    <div><i class="@(string.IsNullOrEmpty(category.Icon) ? "fa-solid fa-tag" : "fa-regular fa-"+category.Icon)"></i>@category.Name</div>
+                    <span class="arrow"><i class="fa-solid fa-chevron-left"></i></span>
+
+                </a>
+
+                @if (hasChildren)
+                {
+                    @await Component.InvokeAsync("MenuByIdComponent", new { id = category.Id })
+                }
+            </li>
+        }
+    </ul>
+</div>

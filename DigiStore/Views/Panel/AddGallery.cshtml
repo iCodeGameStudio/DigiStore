@@ -1,0 +1,195 @@
+﻿@model DigiStore.Core.ViewModels.GalleryViewModel
+
+@{
+    ViewData["Title"] = "گالری تصاویر";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="page-title">گالری تصاویر</h3>
+            <div class="d-inline-block align-items-center">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">قسمتی برای ثبت عکس های مختلف محصول</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form asp-action="AddGallery" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <section class="content">
+        <div class="row">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="box bg-pale-success">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["SuccessTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        <h5>@TempData["SuccessMessage"]</h5>
+                    </div>
+                </div>
+            }
+
+            @* پیام خطا *@
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="box bg-pale-danger">
+                    <div class="box-header">
+                        <h4 class="box-title"><strong>@TempData["ErrorTitle"]</strong></h4>
+                        <div class="box-tools pull-right">
+                            <ul class="box-controls">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        <h5>@TempData["ErrorMessage"]</h5>
+                    </div>
+                </div>
+            }
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">ثبت عکس برای گالری محصول</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+
+                    <div class="form">
+
+                        <div class="box-body">
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <div class="input-group">
+                                        <label for="logo-upload" class="btn btn-danger input-group-text">
+                                            انتخاب فایل...
+                                        </label>
+                                        <input type="file" id="logo-upload" asp-for="Image" class="d-none" />
+                                        <input type="text" class="form-control" id="file-name-display"
+                                               placeholder="عکس های محصول خودتان را انتخاب کنید" readonly />
+                                    </div>
+                                    <span asp-validation-for="Image" class="text-danger mt-1 d-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="ذخیره" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">گالری تصاویر</h4>
+                        <ul class="box-controls pull-right">
+                        </ul>
+                    </div>
+               
+                <div class="box-body">
+                    <div class="form-group">
+                        <div class="mb-3">
+                            <div class="row" id="MyGallery">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </section>
+</form>
+
+@section ScriptManager {
+
+    <script>
+        window.onload = function () {
+            var id = @ViewBag.MyID;
+            var divGallery = $('#MyGallery');
+
+            $.ajax({
+                cache: false, // اصلاح شد
+                type: "GET",
+                url: "@(Url.Action("IndexGallery", "Panel"))",
+                data: { "id": id },
+                success: function (data) {
+                    divGallery.html(data);
+                }
+            });
+        }
+    </script>
+
+
+    <script>
+        // کد نمایش نام فایل انتخاب‌شده
+        const fileInput = document.getElementById('logo-upload');
+        const fileNameDisplay = document.getElementById('file-name-display');
+
+        if (fileInput && fileNameDisplay) {
+            fileInput.addEventListener('change', function () {
+                if (this.files && this.files.length > 0) {
+                    fileNameDisplay.value = this.files[0].name;
+                } else {
+                    fileNameDisplay.value = 'لطفا یک لوگو برای فروشگاه خودتان انتخاب کنید';
+                }
+            });
+        }
+
+        // آپلود فایل با AJAX و نمایش درصد پیشرفت
+        $('#AddGallery').submit(function (e) {
+            e.preventDefault();
+
+            if (!$(this).valid()) {
+                return;
+            }
+
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: this.action,
+                type: this.method,
+                data: formData,
+                processData: false,
+                contentType: false,
+                xhr: function () {
+                    var xhr = $.ajaxSettings.xhr();
+                    if (xhr.upload) {
+                        xhr.upload.addEventListener('progress', function (e) {
+                            if (e.lengthComputable) {
+                                var percentComplete = (e.loaded / e.total) * 100;
+                                console.log(`درصد آپلود: ${percentComplete.toFixed(2)}%`);
+                                // اینجا میتونی ProgressBar بوت‌استرپ رو آپدیت کنی
+                                $('#upload-progress').css('width', percentComplete + '%');
+                            }
+                        }, false);
+                    }
+                    return xhr;
+                },
+                success: function (response) {
+                    console.log('آپلود موفق', response);
+                    // اینجا میتونی پیام موفقیت با Bootstrap یا SweetAlert2 نشون بدی
+                },
+                error: function () {
+                    console.error('خطا در آپلود فایل');
+                }
+            });
+        });
+    </script>
+
+}

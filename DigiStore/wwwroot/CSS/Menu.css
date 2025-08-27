@@ -1,0 +1,347 @@
+﻿/* استایل‌های پایه */
+:root {
+    --primary-color: #c62828;
+    --light-gray: #f8f9fa;
+    --dark-gray: #424242;
+}
+
+/* ارتفاع ثابت برای نوار ناوبری */
+#topHeader > nav {
+    height: 56px;
+}
+
+/* استایل‌های مشترک برای همه لینک‌های منو */
+.category-trigger-link,
+.other-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background-color: transparent !important;
+}
+
+    /* استایل هاور مشترک برای تغییر رنگ متن */
+    .nav-item:hover > .category-trigger-link, /* برای منوی دسته‌بندی */
+    .other-menu:hover { /* برای سایر منوها */
+        color: var(--primary-color);
+    }
+
+    /* استایل آیکون منوی دسته‌بندی */
+    .category-trigger-link::before {
+        content: '☰';
+        margin-left: 10px;
+        font-size: 16px;
+        color: #555;
+        transition: color 0.3s ease;
+    }
+
+/* تغییر رنگ آیکون در هاور */
+.nav-item:hover > .category-trigger-link::before {
+    color: var(--primary-color);
+}
+
+
+/* === افکت خط انیمیشنی پیوسته برای ساختار یکپارچه === */
+
+/* استایل پایه برای خط زیرین */
+.nav-item > .category-trigger-link::after,
+.nav-item > .other-menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* 
+  تعیین نقطه شروع انیمیشن با استفاده از کلاس مشترک .nav-item
+  آیتم‌های فرد (اولین، سومین، ...) از راست شروع می‌شوند.
+*/
+.nav-item:nth-child(odd) > .category-trigger-link::after, /* برای لینک داخل آیتم اول */
+.nav-item:nth-child(odd).other-menu::after { /* برای لینک‌های فرد دیگر */
+    right: 0;
+    left: auto;
+}
+
+/* 2. تعیین جهت انیمیشن برای آیتم‌های زوج (شروع از چپ) */
+.nav-item:nth-child(even) > a::after {
+    left: 0;
+    right: auto;
+}
+
+/* 3. تعیین جهت انیمیشن برای آیتم‌های فرد (شروع از راست) */
+.nav-item:nth-child(odd) > a::after {
+    right: 0;
+    left: auto;
+}
+
+/* 4. فعال کردن انیمیشن در حالت هاور روی والد (.nav-item) */
+.nav-item:hover > a::after {
+    width: 100%;
+}
+
+/* فعال کردن انیمیشن در حالت هاور */
+.nav-item:hover > .category-trigger-link::after, /* هاور روی آیتم، افکت روی لینک فرزند */
+.nav-item.other-menu:hover::after { /* هاور روی آیتم، افکت روی خودش */
+    width: 100%;
+}
+
+
+/* === استایل‌های مگا منو (بدون تغییر) === */
+.category-menu-container {
+    position: relative;
+    height: 100%;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 980px;
+    height: 550px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 1000;
+    direction: rtl;
+    overflow: hidden;
+}
+
+.category-menu-container:hover .mega-menu {
+    display: flex;
+}
+
+.main-categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+    background-color: var(--light-gray);
+    height: 100%;
+    overflow-y: auto;
+}
+
+    .main-categories li a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        text-decoration: none;
+        color: var(--dark-gray);
+        font-size: 15px;
+        font-weight: 500;
+        border-bottom: 1px solid #eee;
+        transition: all 0.2s ease-in-out;
+        position: relative; /* برای زیرمنوها در موبایل */
+    }
+
+        .main-categories li a i {
+            margin-left: 12px;
+            font-size: 18px;
+            width: 20px;
+            text-align: center;
+            color: #888;
+        }
+
+        .main-categories li a .arrow {
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+    .main-categories li:hover > a {
+        background-color: #fff;
+        color: var(--primary-color);
+    }
+
+        .main-categories li:hover > a i {
+            color: var(--primary-color);
+        }
+
+        .main-categories li:hover > a .arrow {
+            transform: translateX(-5px);
+        }
+
+.sub-category-panel {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 250px;
+    width: calc(100% - 250px);
+    height: 100%;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.main-categories li:hover > .sub-category-panel {
+    display: block;
+}
+
+.sub-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px 25px;
+}
+
+.sub-category-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .sub-category-group .group-title {
+        position:relative;
+        padding-right:12px;
+        color: #333;
+        font-weight: 700;
+        font-size: 16px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 2px solid #f0f0f0;
+        text-decoration: none;
+        display: block;
+        transition: color 0.2s;
+    }
+
+        .sub-category-group .group-title:hover {
+            color: var(--primary-color);
+        }
+
+        .sub-category-group .group-title::after {
+            content: ' ›';
+            color: var(--primary-color);
+        }
+        .sub-category-group .group-title::before {
+            content: ''; /* این پراپرتی برای نمایش ::before الزامی است */
+            position: absolute;
+            /* موقعیت‌دهی خط در سمت راست و وسط به صورت عمودی */
+            right: 0; /* چسبیدن به لبه راست */
+            top: 50%; /* شروع از وسط ارتفاع والد */
+            transform: translateY(-50%); /* بالا بردن به اندازه نصف ارتفاع خودش برای وسط‌چین شدن کامل */
+            /* استایل ظاهری خط */
+            width: 3px; /* ضخامت خط */
+            height: 60%; /* ارتفاع "کوچک" خط (می‌توانید تغییر دهید) */
+            background-color: var(--primary-color); /* استفاده از رنگ قرمز اصلی شما */
+            border-radius: 2px; /* کمی گرد کردن گوشه‌ها برای ظاهر نرم‌تر (اختیاری) */
+        }
+
+    .sub-category-group li a {
+        color: #555;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 9px 5px;
+        display: block;
+        transition: all 0.2s ease;
+    }
+
+        .sub-category-group li a:hover {
+            color: var(--primary-color);
+           /* background-color: #f5f5f5;*/
+            border-radius: 4px;
+        }
+
+/* دکمه بستن منوی موبایل (در ابتدا مخفی) */
+.close-menu-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--dark-gray);
+}
+
+/* لایه پوشاننده صفحه در حالت موبایل */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+/* --- استایل‌های واکنش‌گرا برای موبایل و تبلت --- */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .category-menu-container {
+        display: none; /* منوی دسکتاپ را مخفی کن */
+    }
+
+    .hamburger-menu {
+        display: block; /* منوی همبرگری را نمایش بده */
+    }
+
+    .mega-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -300px; /* در ابتدا خارج از صفحه */
+        width: 300px;
+        height: 100%;
+/*        border-radius: 0;*/
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 999;
+/*        border: none;
+        border-left: 1px solid var(--border-color);*/
+    }
+
+        /* کلاس فعال برای نمایش منوی موبایل */
+        .mega-menu.active {
+            right: 0;
+        }
+
+    .main-categories {
+        width: 100%;
+        background-color: #fff;
+    }
+
+        .main-categories li .submenu-toggle {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #999;
+            transition: transform 0.3s ease;
+        }
+
+        .main-categories li.open > a .submenu-toggle {
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+    .sub-category-panel {
+        display: none; /* زیرمنوها در ابتدا مخفی */
+        position: static; /* از حالت absolute خارج می‌شود */
+        width: 100%;
+        height: auto;
+        padding: 10px 20px 20px 20px;
+        background-color: var(--light-gray);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .sub-category-grid {
+        grid-template-columns: 1fr; /* تک ستونه شدن */
+        gap: 15px;
+    }
+
+    .close-menu-btn {
+        display: block;
+    }
+}

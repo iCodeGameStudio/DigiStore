@@ -1,0 +1,150 @@
+﻿@model DigiStore.Core.ViewModels.ProductViewModel
+
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    // ViewData["Title"] = "ثبت محصول جدید";
+    // Layout = "~/Views/Shared/_Panel.cshtml";
+    Layout = null;
+    
+}
+
+<form asp-action="AddProduct" enctype="multipart/form-data" method="post" id="MyForm">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <div class="row">
+        <!-- ستون راست -->
+        <div class="col-md-6">
+
+            <!-- انتخاب برند -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="ti-mouse"></i>انتخاب برند
+                        </span>
+                    </div>
+                <select asp-for="BrandId" asp-items="ViewBag.BrandId" class="form-control"></select>
+                </div>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+            </div>
+
+            <!-- نام محصول -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-pencil"></i></span>
+                    </div>
+                <input asp-for="Name" class="form-control" placeholder="نام محصول را وارد کنید" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <!-- قیمت محصول -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input asp-for="Price" class="form-control" placeholder="قیمت محصول را بنویسد" autocomplete="off" />
+                    <div class="input-group-append">
+                        <span class="input-group-text">ریال</span>
+                    </div>
+                </div>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <!-- موجودی -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-check"></i></span>
+                    </div>
+                    <input asp-for="Exist" class="form-control" placeholder="تعداد موجود را وارد کنید" />
+                </div>
+                <span asp-validation-for="Exist" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <!-- ستون چپ -->
+        <div class="col-md-6">
+
+            <!-- انتخاب دسته بندی -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-mouse"></i>انتخاب دسته بندی</span>
+                    </div>
+                    <select asp-for="CategoryId" asp-items="ViewBag.CategoryId" class="form-control"></select>
+                </div>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <!-- عکس شاخص -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-file"></i>انتخاب عکس شاخص محصول</span>
+                    </div>
+                <input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+
+            <!-- قیمت قبلی -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input asp-for="DeletePrice" class="form-control" placeholder="قیمت قبلی محصول را بنویسد" autocomplete="off" />
+                    <div class="input-group-append">
+                        <span class="input-group-text">ریال</span>
+                    </div>
+                </div>
+                <span asp-validation-for="DeletePrice" class="text-danger"></span>
+            </div>
+
+            <!-- وضعیت نمایش -->
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="NotShow" id="basic_checkbox_2" />
+                    <label class="form-check-label" for="basic_checkbox_2">
+                        @Html.DisplayNameFor(model => model.NotShow)
+                    </label>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- توضیحات (تمام عرض) -->
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ti-text"></i>توضیحات</span>
+                </div>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+
+    
+        <input type="submit" value="ثبت محصول" class="btn btn-success btn-block btn-lg" />
+</form>
+
+<script>
+    CKEDITOR.replace('Description', {
+        contentsCss: ['~/CSS/Font.css'], // CSS فونت‌ها
+        font_names: 'Iransans;' // فونت‌های نمایش داده شده در Toolbar
+    });
+
+    // قبل از submit فرم، محتوا را به textarea منتقل کن
+    document.querySelector('form').addEventListener('submit', function (e) {
+        for (var instance in CKEDITOR.instances) {
+            CKEDITOR.instances[instance].updateElement();
+        }
+    });
+</script>

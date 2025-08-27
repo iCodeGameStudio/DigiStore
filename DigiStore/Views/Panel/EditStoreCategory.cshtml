@@ -1,0 +1,57 @@
+﻿@model DigiStore.Core.ViewModels.StoreCategoryViewModel
+
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    Layout = null;
+}
+
+<form asp-action="EditStoreCategory" id="MyForm" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <div class="row">
+        <!-- تصویر سمت چپ -->
+        <div class="col-md-5 text-center mb-4 order-md-2 order-1">
+            <img src="~/Images/Users/Stores/@Model.ImgName"
+                 alt="تصویر پیدا نشد"
+                 class="img-fluid rounded shadow"
+                 style="max-height:400px; width:100%; transition: transform .3s; cursor: pointer;"
+                 onmouseover="this.style.transform='scale(1.05)'"
+                 onmouseout="this.style.transform='scale(1)'" />
+        </div>
+
+        <!-- فیلدها سمت راست -->
+        <div class="col-md-7 order-md-1 order-2">
+
+            <!-- انتخاب دسته بندی -->
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-mouse"></i>انتخاب دسته بندی</span>
+                    </div>
+                    <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                </div>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ti-mouse"></i>انتخاب عکس مدارک</span>
+                    </div>
+                    <input type="file" asp-for="Img" class="form-control" />
+                </div>
+                <span asp-validation-for="Img" class="text-danger"></span>
+            </div>
+
+        </div>
+    </div>
+    <input type="submit" value="ویرایش" class="btn btn-success btn-block btn-lg" />
+</form>
+

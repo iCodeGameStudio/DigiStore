@@ -1,0 +1,11 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.Category>
+
+@if (Model != null && Model.Any())
+{
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="/Home/SearchByCategory/@item.Id">@item.Name</a>
+        </li>
+    }
+}

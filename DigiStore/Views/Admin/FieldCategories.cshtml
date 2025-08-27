@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DigiStore.DataAccessLayer.Entities.Field>
+@using DigiStore.Core.Classes;
+@inject PanelLayoutScope scope
+@{
+    bool isAjax = Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+    if (!isAjax)
+    {
+        // ریدایرکت با استفاده از HttpContext
+        Context.Response.Redirect("/");
+        return; // جلوگیری از ادامه رندر
+    }
+    int CategoryId = ViewBag.CategoryId;
+}
+
+<form asp-action="UpdateFieldCategory" id="MyForm" method="post">
+    <input type="hidden" name="CategoryId" value="@CategoryId" />
+
+    <ul class="list-group list-group-flush checklist-scroll">
+        @foreach (var item in Model)
+        {
+            bool isChecked = scope.ExistsFieldCategory(item.Id, CategoryId);
+            <li class="list-group-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="@item.Id"
+                           id="chk_@item.Id"
+                           name="SelectedFields"
+                    @(isChecked ? "checked" : "") />
+                    <label class="form-check-label" for="chk_@item.Id">
+                        @item.Name
+                    </label>
+                </div>
+            </li>
+        }
+    </ul>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-success btn-block">ذخیره</button>
+    </div>
+</form>
+
+
+

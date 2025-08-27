@@ -1,0 +1,585 @@
+﻿@using DigiStore.Core.Classes;
+@inject PanelLayoutScope scope
+
+@{
+
+    string rolename = scope.GetUserRoleName(User.Identity.Name);
+    int adminBell = scope.GetBrandsCount();
+    int UserId = scope.GetUserId(User.Identity.Name);
+    bool ActivateStore = scope.GetActivateStore(UserId);
+    string LogoStore = "";
+
+    string fullname = "";
+
+    if (rolename == "فروشگاه")
+    {
+        LogoStore = scope.GetLogoStore(User.Identity.Name);
+        fullname = scope.GetNameStore(UserId);
+    }
+    else
+    {
+      fullname = scope.GetFullName(User.Identity.Name);
+    }
+}
+
+<html lang="fa">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="~/Images/Site/ADQ.png" asp-append-version="true" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/panel/bootstrap-extend.css" rel="stylesheet" />
+    <link href="~/css/panel/master_style.css" rel="stylesheet" />
+    <link href="~/css/panel/_all-skins.css" rel="stylesheet" />
+    <link href="~/css/panel/morris.css" rel="stylesheet" />
+    <link href="~/css/panel/datatables.min.css" rel="stylesheet" />
+    <link href="~/css/panel/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/panel/materialdesignicons.css" rel="stylesheet" />
+    <link href="~/css/panel/ionicons.css" rel="stylesheet" />
+    <link href="~/css/panel/themify-icons.css" rel="stylesheet" />
+    <link href="~/css/panel/simple-line-icons.css" rel="stylesheet" />
+    <link href="~/css/mds.bs.datetimepicker.style.css" rel="stylesheet" />
+    <link href="~/css/font.css" rel="stylesheet" />
+    <link href="~/css/persiandatepicker.min.css" rel="stylesheet" />
+    <link href="~/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="hold-transition skin-black sidebar-mini rtl">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <!-- mini logo -->
+                <div class="logo-mini">
+                    <span class="light-logo"><img src="~/Images/Site/logo-light.png" alt="logo"></span>
+                    <span class="dark-logo"><img src="~/Images/Site/logo-dark.png" alt="logo"></span>
+                </div>
+                <!-- logo-->
+                <div class="logo-lg">
+                    <span class="light-logo"><img src="~/Images/Site/logo-light-text.png" alt="logo"></span>
+                    <span class="dark-logo"><img src="~/Images/Site/logo-dark-text.png" alt="logo"></span>
+                </div>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <div>
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                </div>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account-->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                @if (rolename == "مدیر")
+                                {
+                                    <img src="~/Images/Users/Admin.png" class="user-image rounded-circle" alt="User Image">
+                                }
+                                else
+                                {
+                                    if (LogoStore != null)
+                                    {
+                                        <img src="~/Images/Users/Stores/@LogoStore" class="user-image rounded-circle" alt="User Image">
+                                    }
+                                    else
+                                    {
+                                        <img src="~/Images/Users/Avatar.png" class="user-image rounded-circle" alt="User Image">
+                                    }
+                                }
+
+                            </a>
+                            <ul class="dropdown-menu animated flipInY">
+                                <!-- User image -->
+                                <li class="user-header bg-img" style="background-image: url(../../Images/Users/user-info.jpg)" data-overlay="3">
+                                    <div class="flexbox justify-content-center">
+                                        @if (rolename == "مدیر")
+                                        {
+                                            <img src="~/Images/Users/Admin.png" class="user-image rounded-circle" alt="User Image">
+                                        }
+                                        else
+                                        {
+                                            if (LogoStore != null)
+                                            {
+                                                <img src="~/Images/Users/Stores/@LogoStore" class="user-image rounded-circle" alt="User Image">
+                                            }
+                                            else
+                                            {
+                                                <img src="~/Images/Users/Avatar.png" class="user-image rounded-circle" alt="User Image">
+                                            }
+                                        }
+
+                                        <h4 class="user-name align-self-center">
+                                            <span>@fullname</span>
+                                        </h4>
+                                    </div>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ion ion-person"></i> پروفایل من</a>
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ion ion-bag"></i> موجودی</a>
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ion ion-email-unread"></i> پیام ها</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ion ion-settings"></i> تنظیمات حساب</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="~/Accounts/logOut"><i class="ion-log-out"></i> خروج</a>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="p-10"><a href="javascript:void(0)" class="btn btn-sm btn-rounded btn-success">مشاهده نمایه</a></div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Messages -->
+                        <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-email"></i>
+                                <span class="nav-badge">0</span>
+                            </a>
+                            @*                             <ul class="dropdown-menu animated fadeInDown">
+                            <li class="header">
+                            <div class="bg-img text-white p-20" style="background-image: url(../../Images/Users/user-info.jpg)" data-overlay="5">
+                            <div class="flexbox">
+                            <div>
+                            <h3 class="mb-0 mt-0">5 پیام خوانده نشده</h3>
+                            <span class="font-light">پیام ها</span>
+                            </div>
+                            <div class="font-size-40">
+                            <i class="mdi mdi-email-alert"></i>
+                            </div>
+                            </div>
+                            </div>
+                            </li>
+                            <li>
+                            <ul class="menu sm-scrol">
+                            <li>
+                            <a href="#">
+                            <div class="pull-left">
+                            <img src="~/Images/Users/Admin.png" class="rounded-circle" alt="User Image">
+                            </div>
+                            <div class="mail-contnet">
+                            <h4>
+                            Lorem Ipsum
+                            <small><i class="fa fa-clock-o"></i> 15 mins</small>
+                            </h4>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                            </div>
+                            </a>
+                            </li>
+                            </ul>
+                            </li>
+                            <li class="footer">
+                            <a href="#" class="text-white bg-info">مشاهده همه پیام ها</a>
+                            </li>
+                            </ul>
+                            *@
+                        </li>
+                        @if (rolename == "مدیر")
+                        {
+                            <!-- Notifications -->
+                            <li class="dropdown notifications-menu">
+                                <a href="~/Admin/ShowBrands" class="dropdown-toggle">
+                                    @* data-toggle="dropdown"  *@
+                                    <i class="mdi mdi-bell"></i>
+                                    <span class="nav-badge">@adminBell</span>
+                                </a>
+                            </li>
+                        }
+
+
+
+                        @* <ul class="dropdown-menu animated fadeInDown">
+                        <li class="header">
+                        <div class="bg-img text-white p-20" style="background-image: url(../../Images/Users/user-info.jpg)" data-overlay="5">
+                        <div class="flexbox">
+                        <div>
+                        <h3 class="mb-0 mt-0">7 اعلان جدید</h3>
+                        <span class="font-light">اعلان ها</span>
+                        </div>
+                        <div class="font-size-40">
+                        <i class="mdi mdi-message-alert"></i>
+                        </div>
+                        </div>
+                        </div>
+                        </li>
+                        <li>
+                        <ul class="menu sm-scrol">
+                        <li>
+                        <a href="#"><i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.</a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.</a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.</a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi</a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.</a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="fa fa-user text-primary"></i> Nunc fringilla lorem</a>
+                        </li>
+                        <li>
+                        <a href="#"><i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.</a>
+                        </li>
+                        </ul>
+                        </li>
+                        <li class="footer"><a href="#" class="text-white bg-danger">مشاهده همه اعلان ها</a></li>
+                        </ul> *@
+
+
+                        <!-- Tasks-->
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-bulletin-board"></i>
+                                <span class="nav-badge">0</span>
+                            </a>
+                            @*                             <ul class="dropdown-menu animated fadeInDown">
+                            <li class="header">
+                            <div class="bg-img text-white p-20" style="background-image: url(../../Images/Users/user-info.jpg)" data-overlay="5">
+                            <div class="flexbox">
+                            <div>
+                            <h3 class="mb-0 mt-0">6 وظیفه جدید</h3>
+                            <span class="font-light">وظایف</span>
+                            </div>
+                            <div class="font-size-40">
+                            <i class="mdi mdi-bulletin-board"></i>
+                            </div>
+                            </div>
+                            </div>
+                            </li>
+                            <li>
+                            <ul class="menu sm-scrol">
+                            <li>
+                            <a href="#">
+                            <h3>
+                            Lorem ipsum dolor sit amet
+                            <small class="pull-right">30%</small>
+                            </h3>
+                            <div class="progress xs">
+                            <div class="progress-bar progress-bar-danger" style="width: 30%" role="progressbar"
+                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">30% Complete</span>
+                            </div>
+                            </div>
+                            </a>
+                            </li>
+                            </ul>
+                            </li>
+                            <li class="footer"><a href="#" class="text-white bg-warning">مشاهده همه وظایف</a></li>
+                            </ul>
+                            *@
+                        </li>
+
+                        @*  <!-- Control Sidebar Toggle Button -->
+                        <li>
+                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></a>
+                        </li> *@
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar-->
+            <section class="sidebar">
+
+                <!-- sidebar menu-->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="user-profile treeview">
+                        <a href="index.html">
+                            @if (rolename == "مدیر")
+                            {
+                                <img src="~/Images/Users/Admin.png" alt="user">
+                            }
+                            else
+                            {
+                                if (LogoStore != null)
+                                {
+                                    <img src="~/Images/Users/Stores/@LogoStore" class="user-image rounded-circle" alt="User Image">
+                                }
+                                else
+                                {
+                                    <img src="~/Images/Users/Avatar.png" class="user-image rounded-circle" alt="User Image">
+                                }
+
+                            }
+
+                            <span>
+                                <span class="d-block font-weight-600 font-size-16">@fullname</span>
+                                <span class="email-id">
+                                    @rolename
+                                </span>
+                            </span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="javascript:void()"><i class="fa fa-user mr-5"></i>پروفایل من </a></li>
+                            <li><a href="javascript:void()"><i class="fa fa-money mr-5"></i>موجودی</a></li>
+                            <li><a href="javascript:void()"><i class="fa fa-envelope-open mr-5"></i>پیام ها</a></li>
+                            <li><a href="javascript:void()"><i class="fa fa-cog mr-5"></i>تنظیمات حساب کاربری</a></li>
+                            <li><a href="~/Accounts/logOut"><i class="fa fa-power-off mr-5"></i>خروج</a></li>
+                        </ul>
+                    </li>
+                    @if (rolename == "فروشگاه")
+                    {
+                        @if(ActivateStore == true)
+                        {
+                            
+                        
+                        @* <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>مدیریت محصولات</li> *@
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-settings"></i>
+                                <span>محصولات</span>
+                                <span class="pull-right-container">
+                                        <i class="fa-regular fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="~/Panel/ShowBrands"><i class="mdi mdi-shopping"></i>برند ها</a></li>
+                                <li><a href="~/Panel/ShowProducts"><i class="mdi mdi-shopping"></i>محصولات</a></li>
+                                @*                       <li><a href="~/Panel/Activate"><i class="mdi mdi-key-change"></i>فعالسازی حساب</a></li>
+                            <li><a href="~/Panel/ShowStoreCategory"><i class="mdi mdi-file-document"></i>بارگذاری مدارک</a></li> *@
+                            </ul>
+                        </li>
+                           @*  <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>حسابداری</li> *@
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="mdi mdi-settings"></i>
+                                    <span>مالی</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa-regular fa-angle-right pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="~/Panel/ShowCoupons"><i class="mdi mdi-ticket-percent"></i>کوپن تخفیف</a></li>
+                                    <li><a href="~/Panel/BankCard"><i class="mdi mdi-ticket"></i>حساب مالی</a></li>
+                                </ul>
+                            </li>
+                        }
+
+
+                       @*  <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>مشخصات کاربری</li> *@
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-settings"></i>
+                                <span>تنظیمات</span>
+                                <span class="pull-right-container">
+                                    <i class="fa-regular fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="~/Panel/Edit"><i class="mdi mdi-shopping"></i>مشخصات فروشگاه</a></li>
+                                <li><a href="~/Panel/Activate"><i class="mdi mdi-key-change"></i>فعالسازی حساب</a></li>
+                                <li><a href="~/Panel/ShowStoreCategory"><i class="mdi mdi-file-document"></i>بارگذاری مدارک</a></li>
+                            </ul>
+                        </li>
+                    }
+                    else if (rolename == "مدیر")
+                    {
+                       @*  <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>مدیریت کاربران</li> *@
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa-regular fa-users"></i>
+                                <span>کاربران</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="mdi mdi-toggle-switch-off"></i>مشتریان</a></li>
+                                <li><a href="/Admin/ShowActiveStores"><i class="mdi mdi-toggle-switch-off"></i>فروشگاه ها</a></li>
+                                <li><a href="/Admin/ShowStoreCategories/"><i class="mdi mdi-toggle-switch-off"></i>انتظار</a></li>
+                            </ul>
+                        </li>
+
+                      @*   <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>مدیریت تنظیمات</li> *@
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-settings"></i>
+                                <span>تنظیمات</span>
+                                <span class="pull-right-container">
+                                    <i class="fa-regular fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/Admin/Permissions"><i class="mdi mdi-toggle-switch-off"></i>تنظیمات دسترسی ها</a></li>
+                                <li><a href="/Admin/Setting"><i class="mdi mdi-toggle-switch-off"></i>تنظیمات سایت</a></li>
+                            </ul>
+                        </li>
+
+                        @* <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>مدیریت رسانه</li> *@
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-image-album"></i>
+                                <span>تبلیغات و اطلاعیه ها</span>
+                                <span class="pull-right-container">
+                                    <i class="fa-regular fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/Admin/ShowSliders"><i class="mdi mdi-toggle-switch-off"></i>اسلایدر ها</a></li>
+                                <li><a href="/Admin/ShowBanners"><i class="mdi mdi-toggle-switch-off"></i>جایگاه ها</a></li>
+                            </ul>
+                        </li>
+
+                       @*  <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>مدیریت محصولات</li> *@
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-th-list"></i>
+                                <span>محصولات</span>
+                                <span class="pull-right-container">
+                                    <i class="fa-regular fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/Admin/Categories"><i class="mdi mdi-toggle-switch-off"></i>سر دسته ها</a></li>
+                                <li><a href="/Admin/ShowBrands"><i class="mdi mdi-toggle-switch-off"></i>برند ها</a></li>
+                                <li><a href="/Admin/ShowFields"><i class="mdi mdi-toggle-switch-off"></i>مشخصه ها</a></li>
+                                <li><a href="/Admin/ShowAllProducts"><i class="mdi mdi-toggle-switch-off"></i>نمایش محصولات</a></li>
+
+                            </ul>
+
+                        </li>
+
+                       @*  <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>حسابداری</li> *@
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="mdi mdi-image-album"></i>
+                                <span>مالی</span>
+                                <span class="pull-right-container">
+                                    <i class="fa-regular fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/Admin/ShowAllCoupons"><i class="mdi mdi-toggle-switch-off"></i>کوپن های تخفیف</a></li>
+                            </ul>
+                        </li>
+
+                    }
+
+                    @* <li class="treeview">
+                    <a href="#">
+                    <i class="mdi mdi-content-copy"></i>
+                    <span>تنظیمات 2</span>
+                    <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+                    <li><a href="pages/layout_boxed.html"><i class="mdi mdi-toggle-switch-off"></i>تنظیمات 1</a></li>
+                    <li><a href="pages/layout_fixed.html"><i class="mdi mdi-toggle-switch-off"></i>تنظیمات 2</a></li>
+                    <li><a href="pages/layout_collapsed_sidebar.html"><i class="mdi mdi-toggle-switch-off"></i>تنظیمات 3</a></li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <a href="pages/email_index.html">
+                    <i class="mdi mdi-email"></i>
+                    <span>کاربران</span>
+                    </a>
+                    </li>
+
+
+                    <li class="header nav-small-cap"><i class="mdi mdi-drag-horizontal mr-5"></i>حسابداری</li>
+
+                    <li class="treeview">
+                    <a href="#">
+                    <i class="mdi mdi-notification-clear-all"></i>
+                    <span>میزان فروش</span>
+                    <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+                    <li><a href="#">فاکتور</a></li>
+                    <li class="treeview">
+                    <a href="#">
+                    فاکتور فروشنده ها
+                    <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+                    <li><a href="#">فاکتور 1</a></li>
+                    <li class="treeview">
+                    <a href="#">
+                    فاکتور 2
+                    <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+                    <li><a href="#">فاکتور 3</a></li>
+                    <li><a href="#">فاکتور 4</a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    <li><a href="#">لول1</a></li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <a href="~/Accounts/LogOut">
+                    <i class="mdi mdi-directions"></i>
+                    <span>خروج</span>
+                    </a>
+                    </li> *@
+
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            @RenderBody()
+
+        </div>
+
+    </div>
+
+    <script src="~/js/jquery-3.7.1.min.js"></script>
+    
+    <script src="~/js/persiandatepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/panel/jquery-ui.js"></script>
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <script src="~/js/panel/popper.min.js"></script>
+    <script src="~/js/panel/moment.min.js"></script>
+    <script src="~/js/panel/daterangepicker.js"></script>
+    <script src="~/js/panel/bootstrap.js"></script>
+    <script src="~/js/panel/chart.min.js"></script>
+    <script src="~/js/panel/jquery.slimscroll.js"></script>
+    <script src="~/js/panel/fastclick.js"></script>
+    <script src="~/js/panel/raphael.min.js"></script>
+    <script src="~/js/panel/morris.min.js"></script>
+    <script src="~/js/panel/datatables.min.js"></script>
+    <script src="~/js/panel/template.js"></script>
+    <script src="~/js/panel/dashboard.js"></script>
+    <script src="~/js/panel/demo.js"></script>
+    @*     <script src="~/js/jquery-lobibox.1.2.4.min.js"></script> *@
+    <script src="~/js/searchtable.js"></script>
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckeditor/adapters/jquery.js"></script>
+    
+    @await RenderSectionAsync("ScriptManager", required: false)
+
+   @*  <script src="~/js/persiannumber.js"></script> *@
+
+</body>
+</html>
